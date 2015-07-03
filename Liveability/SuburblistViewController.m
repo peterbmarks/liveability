@@ -39,9 +39,10 @@
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *hereButton = [[UIBarButtonItem alloc] initWithTitle:@"Here" style:UIBarButtonItemStylePlain target:self action:@selector(here:)];
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search:)];
+//    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearch:)];
     self.navigationItem.rightBarButtonItem = hereButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +55,10 @@
     _pushedHere = YES;
     [self performSegueWithIdentifier:@"showDetail" sender:self];
     _pushedHere = NO;
+}
+
+- (void)showSearch:(id)sender {
+    NSLog(@"%s", __func__);
 }
 
 #pragma mark - Segues
@@ -72,6 +77,7 @@
         [controller setDetailItem:pc];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+        [self.searchBar resignFirstResponder];
     }
 }
 
@@ -105,28 +111,31 @@
 #pragma mark - UISearchBar Delegate Methods
 - (void)searchBar:(UISearchBar *)searchBar
     textDidChange:(NSString *)searchText {
+    NSLog(@"%s", __func__);
     NSLog(@"search text = %@", searchText);
     if(searchText.length) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.suburb contains[c] %@",searchText];
         _filteredPostcodes = [NSMutableArray arrayWithArray:[_dataManager.postcodes filteredArrayUsingPredicate:predicate]];
     } else {
         _filteredPostcodes = nil;
+        [searchBar resignFirstResponder];
     }
     [self.tableView reloadData];
 }
 
 // None of these are working
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
+    NSLog(@"%s", __func__);
+    [self.searchBar resignFirstResponder];
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
-    [searchBar resignFirstResponder];
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.searchBar resignFirstResponder];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
+    NSLog(@"%s", __func__);
+    [self.searchBar resignFirstResponder];
 }
 
 
