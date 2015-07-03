@@ -37,8 +37,8 @@
     
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -57,6 +57,9 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Postcode *pc = _dataManager.postcodes[indexPath.row];
+        if(_filteredPostcodes.count) {
+            pc = _filteredPostcodes[indexPath.row];
+        }
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:pc];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
@@ -84,6 +87,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Postcode *pc = _dataManager.postcodes[indexPath.row];
+    if(_filteredPostcodes.count) {
+        pc = _filteredPostcodes[indexPath.row];
+    }
     cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", pc.suburb, pc.state];
     return cell;
 }
@@ -92,5 +98,12 @@
 - (void)searchBar:(UISearchBar *)searchBar
     textDidChange:(NSString *)searchText {
     NSLog(@"search text = %@", searchText);
+    if(searchText.length) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.suburb contains[c] %@",searchText];
+        _filteredPostcodes = [NSMutableArray arrayWithArray:[_dataManager.postcodes filteredArrayUsingPredicate:predicate]];
+    } else {
+        _filteredPostcodes = nil;
+    }
+    [self.tableView reloadData];
 }
 @end
