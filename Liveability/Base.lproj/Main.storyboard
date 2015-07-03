@@ -64,11 +64,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6zu-dq-cvG">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="livabilityCell" id="6zu-dq-cvG" customClass="LivabilityTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6zu-dq-cvG" id="JqZ-ZK-8w9">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FactorLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-zr-1HN">
+                                            <rect key="frame" x="8" y="11" width="92" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ie-DO-hnL">
+                                            <rect key="frame" x="495" y="11" width="97" height="22"/>
+                                            <color key="backgroundColor" red="0.50607556446075219" green="1" blue="0.065009806832465045" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="97" id="VJ6-r5-bJE"/>
+                                                <constraint firstAttribute="height" constant="22" id="f1p-Sh-oix"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" id="9bN-o4-HCU"/>
+                                        <constraint firstItem="yeV-zr-1HN" firstAttribute="leading" secondItem="JqZ-ZK-8w9" secondAttribute="leadingMargin" id="QLN-ve-0m7"/>
+                                        <constraint firstAttribute="centerY" secondItem="yeV-zr-1HN" secondAttribute="centerY" id="jpW-n9-yOd"/>
+                                        <constraint firstItem="9Ie-DO-hnL" firstAttribute="trailing" secondItem="JqZ-ZK-8w9" secondAttribute="trailingMargin" id="mrf-B2-A3X"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="factorLabel" destination="yeV-zr-1HN" id="wK9-rY-LFa"/>
+                                    <outlet property="goodnessView" destination="9Ie-DO-hnL" id="72H-pN-jyp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
