@@ -14,6 +14,7 @@
 @interface MasterViewController ()
 {
     DataManager *_dataManager;
+    NSArray *_filteredPostcodes;
 }
 @end
 
@@ -69,7 +70,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dataManager.postcodes.count;
+    NSInteger rows;
+    if(tableView == self.tableView) {
+        rows = _dataManager.postcodes.count;
+    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+        rows = _filteredPostcodes.count;
+    }
+    return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,5 +87,21 @@
     return cell;
 }
 
+#pragma mark - UISearchDisplayController Delegate Methods
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    // Tells the table data source to reload when text changes
+    //[self filterContentForSearchText:searchString scope:
+    // [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    // Tells the table data source to reload when scope bar selection changes
+//    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+//     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
 
 @end
