@@ -114,4 +114,20 @@
     }
     [self.tableView reloadData];
 }
+
+// None of these are working
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+
+
 @end
