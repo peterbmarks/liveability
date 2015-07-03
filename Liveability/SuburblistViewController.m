@@ -16,6 +16,7 @@
 {
     DataManager *_dataManager;
     NSArray *_filteredPostcodes;
+    BOOL _pushedHere;
 }
 @end
 
@@ -34,7 +35,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     _dataManager = appDelegate.dataManager;
-    
+    _pushedHere = NO;
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *hereButton = [[UIBarButtonItem alloc] initWithTitle:@"Here" style:UIBarButtonItemStylePlain target:self action:@selector(here:)];
@@ -50,17 +51,22 @@
 
 - (void)here:(id)sender {
     NSLog(@"here");
+    _pushedHere = YES;
     [self performSegueWithIdentifier:@"showDetail" sender:self];
+    _pushedHere = NO;
 }
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Postcode *pc = _dataManager.postcodes[indexPath.row];
-        if(_filteredPostcodes.count) {
-            pc = _filteredPostcodes[indexPath.row];
+        Postcode *pc = nil;
+        if(!_pushedHere) {
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            pc = _dataManager.postcodes[indexPath.row];
+            if(_filteredPostcodes.count) {
+                pc = _filteredPostcodes[indexPath.row];
+            }
         }
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:pc];

@@ -11,10 +11,11 @@
 
 @class Postcode;
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <CLLocationManagerDelegate, MKReverseGeocoderDelegate>
 
 @property (strong, nonatomic) Postcode* detailItem;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic) CLLocationManager *myLocationManager;
 
 @end
 
