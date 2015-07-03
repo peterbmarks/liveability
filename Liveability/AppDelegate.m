@@ -22,6 +22,8 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
+    self.dataManager = [DataManager new];
     return YES;
 }
 
