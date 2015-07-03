@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Postcode.h"
 
 @interface DetailViewController ()
 
@@ -28,7 +29,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = self.detailItem[@"suburb"];
+        self.detailDescriptionLabel.text = self.detailItem.suburb;
     }
 }
 

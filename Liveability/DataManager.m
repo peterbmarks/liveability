@@ -8,6 +8,7 @@
 
 #import "DataManager.h"
 #import "FMDB.h"
+#import "Postcode.h"
 
 NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
 
@@ -24,12 +25,12 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     self = [super init];
     if (self) {
         self.postcodes = [NSMutableArray new];
-        [self openDatabases];
+        [self readPostcodes];
     }
     return self;
 }
 
-- (void)openDatabases {
+- (void)readPostcodes {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"postcodes"
                                                          ofType:@"sqlite"];
     _postcodesDb = [FMDatabase databaseWithPath:filePath];
@@ -38,14 +39,16 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     }
     NSLog(@"_postcodesDb opened");
     // postcode, suburb, state, latitude, longitude
-    FMResultSet *s = [_postcodesDb executeQuery:@"SELECT suburb, state, postcode FROM postcodes"];
+    FMResultSet *s = [_postcodesDb executeQuery:@"SELECT suburb, state, postcode, latitude, longitude FROM postcodes"];
     while ([s next]) {
         //retrieve values for each record
-        NSString *postcode = [s stringForColumn:@"postcode"];
-        NSString *suburb = [s stringForColumn:@"suburb"];
-        NSString *state = [s stringForColumn:@"state"];
-        //NSLog(@"postcode = %@, suburb: %@, state: %@", postcode, suburb, state);
-        [self.postcodes addObject:@{@"postcode": postcode, @"suburb": suburb, @"state": state}];
+        Postcode * pc = [Postcode new];
+        pc.postcode = [s stringForColumn:@"postcode"];
+        pc.suburb = [s stringForColumn:@"suburb"];
+        pc.state = [s stringForColumn:@"state"];
+        pc.latitude = [s doubleForColumn:@"latitude"];
+        pc.longitude = [s doubleForColumn:@"longitude"];
+        [self.postcodes addObject:pc];
     }
     NSLog(@"data loaded");
 }

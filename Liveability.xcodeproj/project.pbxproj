@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7284A60D1B471480003A28B7 /* Postcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7284A60C1B471480003A28B7 /* Postcode.m */; };
 		728DB97D1B46910C00FBE1BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB97C1B46910C00FBE1BD /* main.m */; };
 		728DB9801B46910C00FBE1BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB97F1B46910C00FBE1BD /* AppDelegate.m */; };
 		728DB9831B46910C00FBE1BD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9821B46910C00FBE1BD /* MasterViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7284A60B1B471480003A28B7 /* Postcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postcode.h; sourceTree = "<group>"; };
+		7284A60C1B471480003A28B7 /* Postcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postcode.m; sourceTree = "<group>"; };
 		728DB9771B46910C00FBE1BD /* Liveability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liveability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		728DB97B1B46910C00FBE1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		728DB97C1B46910C00FBE1BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				728DB97A1B46910C00FBE1BD /* Supporting Files */,
 				728DB9A61B46982D00FBE1BD /* DataManager.h */,
 				728DB9A71B46982D00FBE1BD /* DataManager.m */,
+				7284A60B1B471480003A28B7 /* Postcode.h */,
+				7284A60C1B471480003A28B7 /* Postcode.m */,
 				728DB9A91B46984300FBE1BD /* fmdb */,
 			);
 			path = Liveability;
@@ -289,6 +294,7 @@
 				728DB9B71B46985200FBE1BD /* FMDatabasePool.m in Sources */,
 				728DB9B61B46985200FBE1BD /* FMDatabaseAdditions.m in Sources */,
 				728DB9861B46910C00FBE1BD /* DetailViewController.m in Sources */,
+				7284A60D1B471480003A28B7 /* Postcode.m in Sources */,
 				728DB9B81B46985200FBE1BD /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +492,7 @@
 				728DB99F1B46910C00FBE1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		728DB9A01B46910C00FBE1BD /* Build configuration list for PBXNativeTarget "LiveabilityTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +501,7 @@
 				728DB9A21B46910C00FBE1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

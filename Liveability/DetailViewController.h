@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Postcode;
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) NSDictionary * detailItem;
+@property (strong, nonatomic) Postcode* detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end

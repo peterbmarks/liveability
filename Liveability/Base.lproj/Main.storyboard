@@ -78,12 +78,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="0DD-SI-k4S">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="lbR-XK-hgp">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="7bK-jq-Zjz" id="crE-34-SBu"/>
+                                <outlet property="delegate" destination="7bK-jq-Zjz" id="8Qz-p9-dT2"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -116,12 +116,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Suburbs" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <outlet property="searchBar" destination="lbR-XK-hgp" id="dK8-oJ-TEd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="y6R-Dr-e1B">
                     <connections>
                         <outlet property="delegate" destination="7bK-jq-Zjz" id="XgL-M2-xxp"/>
-                        <outlet property="searchBar" destination="0DD-SI-k4S" id="Woy-H4-zbh"/>
                         <outlet property="searchContentsController" destination="7bK-jq-Zjz" id="z3S-it-2e0"/>
                         <outlet property="searchResultsDataSource" destination="7bK-jq-Zjz" id="avl-2P-uXP"/>
                         <outlet property="searchResultsDelegate" destination="7bK-jq-Zjz" id="M7z-7L-E2w"/>

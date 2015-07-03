@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "DataManager.h"
+#import "Postcode.h"
 
 @interface MasterViewController ()
 {
@@ -55,9 +56,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDictionary *object = _dataManager.postcodes[indexPath.row];
+        Postcode *pc = _dataManager.postcodes[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:pc];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -71,10 +72,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger rows;
-    if(tableView == self.tableView) {
-        rows = _dataManager.postcodes.count;
-    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+    if(_filteredPostcodes.count) {
         rows = _filteredPostcodes.count;
+    } else {
+        rows = _dataManager.postcodes.count;
     }
     return rows;
 }
@@ -82,26 +83,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDictionary *object = _dataManager.postcodes[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", object[@"suburb"], object[@"state"]];
+    Postcode *pc = _dataManager.postcodes[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", pc.suburb, pc.state];
     return cell;
 }
 
-#pragma mark - UISearchDisplayController Delegate Methods
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    // Tells the table data source to reload when text changes
-    //[self filterContentForSearchText:searchString scope:
-    // [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
+#pragma mark - UISearchBar Delegate Methods
+- (void)searchBar:(UISearchBar *)searchBar
+    textDidChange:(NSString *)searchText {
+    NSLog(@"search text = %@", searchText);
 }
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    // Tells the table data source to reload when scope bar selection changes
-//    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
-//     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
 @end
