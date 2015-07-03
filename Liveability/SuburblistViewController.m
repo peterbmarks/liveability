@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Peter Marks. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "SuburblistViewController.h"
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "DataManager.h"
 #import "Postcode.h"
 
-@interface MasterViewController ()
+@interface SuburblistViewController ()
 {
     DataManager *_dataManager;
     NSArray *_filteredPostcodes;
 }
 @end
 
-@implementation MasterViewController
+@implementation SuburblistViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];

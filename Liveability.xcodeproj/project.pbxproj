@@ -10,7 +10,7 @@
 		7284A60D1B471480003A28B7 /* Postcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7284A60C1B471480003A28B7 /* Postcode.m */; };
 		728DB97D1B46910C00FBE1BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB97C1B46910C00FBE1BD /* main.m */; };
 		728DB9801B46910C00FBE1BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB97F1B46910C00FBE1BD /* AppDelegate.m */; };
-		728DB9831B46910C00FBE1BD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9821B46910C00FBE1BD /* MasterViewController.m */; };
+		728DB9831B46910C00FBE1BD /* SuburblistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9821B46910C00FBE1BD /* SuburblistViewController.m */; };
 		728DB9861B46910C00FBE1BD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9851B46910C00FBE1BD /* DetailViewController.m */; };
 		728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728DB9871B46910C00FBE1BD /* Main.storyboard */; };
 		728DB98B1B46910C00FBE1BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DB98A1B46910C00FBE1BD /* Images.xcassets */; };
@@ -44,8 +44,8 @@
 		728DB97C1B46910C00FBE1BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		728DB97E1B46910C00FBE1BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		728DB97F1B46910C00FBE1BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		728DB9811B46910C00FBE1BD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		728DB9821B46910C00FBE1BD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		728DB9811B46910C00FBE1BD /* SuburblistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuburblistViewController.h; sourceTree = "<group>"; };
+		728DB9821B46910C00FBE1BD /* SuburblistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuburblistViewController.m; sourceTree = "<group>"; };
 		728DB9841B46910C00FBE1BD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		728DB9851B46910C00FBE1BD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		728DB9881B46910C00FBE1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 			children = (
 				728DB97E1B46910C00FBE1BD /* AppDelegate.h */,
 				728DB97F1B46910C00FBE1BD /* AppDelegate.m */,
-				728DB9811B46910C00FBE1BD /* MasterViewController.h */,
-				728DB9821B46910C00FBE1BD /* MasterViewController.m */,
+				728DB9811B46910C00FBE1BD /* SuburblistViewController.h */,
+				728DB9821B46910C00FBE1BD /* SuburblistViewController.m */,
 				728DB9841B46910C00FBE1BD /* DetailViewController.h */,
 				728DB9851B46910C00FBE1BD /* DetailViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
@@ -287,7 +287,7 @@
 			files = (
 				728DB9801B46910C00FBE1BD /* AppDelegate.m in Sources */,
 				728DB9A81B46982D00FBE1BD /* DataManager.m in Sources */,
-				728DB9831B46910C00FBE1BD /* MasterViewController.m in Sources */,
+				728DB9831B46910C00FBE1BD /* SuburblistViewController.m in Sources */,
 				728DB9B51B46985200FBE1BD /* FMDatabase.m in Sources */,
 				728DB9B91B46985200FBE1BD /* FMResultSet.m in Sources */,
 				728DB97D1B46910C00FBE1BD /* main.m in Sources */,
