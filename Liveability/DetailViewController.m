@@ -33,6 +33,10 @@
     // Update the user interface for the detail item.
     if (self.detailItem) {
         self.navigationController.navigationItem.title = self.detailItem.suburb;
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:self.detailItem.latitude longitude:self.detailItem.longitude];
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000);
+        MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+        [self.mapView setRegion:adjustedRegion animated:YES];
     } else {
         self.navigationController.navigationItem.title = @"Locating...";
         self.myLocationManager = [[CLLocationManager alloc] init];
@@ -113,9 +117,10 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     // back on the main thread
                     self.navigationController.navigationItem.title = self.detailItem.suburb;
-                    [self configureView];   // now that we have a Postcode
+                    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(placemark.location.coordinate, 500, 500);
+                    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+                    [self.mapView setRegion:adjustedRegion animated:YES];
                 });
-                
             }
         }];
     }
