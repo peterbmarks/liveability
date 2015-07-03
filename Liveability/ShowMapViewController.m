@@ -8,6 +8,7 @@
 
 #import "ShowMapViewController.h"
 #import "Postcode.h"
+#import "LivabilityTableViewController.h"
 #import <AddressBookUI/AddressBookUI.h>
 #import <CoreLocation/CLGeocoder.h>
 #import <CoreLocation/CLPlacemark.h>
@@ -52,12 +53,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIBarButtonItem *livabilityButton = [[UIBarButtonItem alloc] initWithTitle:@"Livability" style:UIBarButtonItemStylePlain target:self action:@selector(showLivability:)];
+    self.navigationItem.rightBarButtonItem = livabilityButton;
     [self configureView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showLivability:(id)sender {
+    NSLog(@"%s", __func__);
+    [self performSegueWithIdentifier:@"showLivability" sender:self];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -129,4 +137,14 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
     NSLog(@"reverse geocoder didfindplacemark");
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showLivability"]) {
+        LivabilityTableViewController *controller = (LivabilityTableViewController *)[segue destinationViewController];
+        controller.postcode = self.detailItem;
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
+}
+
 @end

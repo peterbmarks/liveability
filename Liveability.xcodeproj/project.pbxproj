@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		727B28B61B4752B400E92584 /* LivabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B51B4752B400E92584 /* LivabilityTableViewController.m */; };
 		7284A60D1B471480003A28B7 /* Postcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7284A60C1B471480003A28B7 /* Postcode.m */; };
 		7284A60F1B471BC3003A28B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A60E1B471BC3003A28B7 /* MapKit.framework */; };
 		7284A6111B471BCC003A28B7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A6101B471BCC003A28B7 /* AddressBook.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		727B28B41B4752B400E92584 /* LivabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewController.h; sourceTree = "<group>"; };
+		727B28B51B4752B400E92584 /* LivabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivabilityTableViewController.m; sourceTree = "<group>"; };
 		7284A60B1B471480003A28B7 /* Postcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postcode.h; sourceTree = "<group>"; };
 		7284A60C1B471480003A28B7 /* Postcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postcode.m; sourceTree = "<group>"; };
 		7284A60E1B471BC3003A28B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				728DB9821B46910C00FBE1BD /* SuburblistViewController.m */,
 				728DB9841B46910C00FBE1BD /* ShowMapViewController.h */,
 				728DB9851B46910C00FBE1BD /* ShowMapViewController.m */,
+				727B28B41B4752B400E92584 /* LivabilityTableViewController.h */,
+				727B28B51B4752B400E92584 /* LivabilityTableViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
 				728DB98A1B46910C00FBE1BD /* Images.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
@@ -299,6 +304,7 @@
 				728DB9B51B46985200FBE1BD /* FMDatabase.m in Sources */,
 				728DB9B91B46985200FBE1BD /* FMResultSet.m in Sources */,
 				728DB97D1B46910C00FBE1BD /* main.m in Sources */,
+				727B28B61B4752B400E92584 /* LivabilityTableViewController.m in Sources */,
 				728DB9B71B46985200FBE1BD /* FMDatabasePool.m in Sources */,
 				728DB9B61B46985200FBE1BD /* FMDatabaseAdditions.m in Sources */,
 				728DB9861B46910C00FBE1BD /* ShowMapViewController.m in Sources */,
