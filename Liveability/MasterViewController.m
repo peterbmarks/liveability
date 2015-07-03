@@ -37,8 +37,9 @@
     
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
+    UIBarButtonItem *hereButton = [[UIBarButtonItem alloc] initWithTitle:@"Here" style:UIBarButtonItemStylePlain target:self action:@selector(here:)];
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+    self.navigationItem.rightBarButtonItem = hereButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -47,8 +48,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)search:(id)sender {
-    NSLog(@"search");
+- (void)here:(id)sender {
+    NSLog(@"here");
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 
 #pragma mark - Segues
