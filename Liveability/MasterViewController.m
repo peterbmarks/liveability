@@ -76,7 +76,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDictionary *object = _dataManager.postcodes[indexPath.row];
-    cell.textLabel.text = object[@"suburb"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", object[@"suburb"], object[@"state"]];
     return cell;
 }
 
