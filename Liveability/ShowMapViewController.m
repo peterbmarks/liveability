@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Peter Marks. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "ShowMapViewController.h"
 #import "Postcode.h"
 #import <AddressBookUI/AddressBookUI.h>
 #import <CoreLocation/CLGeocoder.h>
 #import <CoreLocation/CLPlacemark.h>
 
-@interface DetailViewController ()
+@interface ShowMapViewController ()
 
 @end
 
-@implementation DetailViewController
+@implementation ShowMapViewController
 
 #pragma mark - Managing the detail item
 

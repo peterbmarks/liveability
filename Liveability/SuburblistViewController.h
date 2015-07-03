@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@class ShowMapViewController;
 
 @interface SuburblistViewController : UITableViewController <UISearchBarDelegate>
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) ShowMapViewController *detailViewController;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

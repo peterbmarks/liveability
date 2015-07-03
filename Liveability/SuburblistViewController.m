@@ -7,7 +7,7 @@
 //
 
 #import "SuburblistViewController.h"
-#import "DetailViewController.h"
+#import "ShowMapViewController.h"
 #import "AppDelegate.h"
 #import "DataManager.h"
 #import "Postcode.h"
@@ -41,7 +41,7 @@
     UIBarButtonItem *hereButton = [[UIBarButtonItem alloc] initWithTitle:@"Here" style:UIBarButtonItemStylePlain target:self action:@selector(here:)];
 //    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearch:)];
     self.navigationItem.rightBarButtonItem = hereButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (ShowMapViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
@@ -73,7 +73,7 @@
                 pc = _filteredPostcodes[indexPath.row];
             }
         }
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+        ShowMapViewController *controller = (ShowMapViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:pc];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
