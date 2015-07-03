@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MapKit;
+
 @class Postcode;
 
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Postcode* detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
