@@ -9,6 +9,8 @@
 #import "DataManager.h"
 #import "FMDB.h"
 
+NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
+
 @interface DataManager()
 {
     FMDatabase *_postcodesDb;
@@ -42,9 +44,10 @@
         NSString *postcode = [s stringForColumn:@"postcode"];
         NSString *suburb = [s stringForColumn:@"suburb"];
         NSString *state = [s stringForColumn:@"state"];
-        NSLog(@"postcode = %@, suburb: %@, state: %@", postcode, suburb, state);
+        //NSLog(@"postcode = %@, suburb: %@, state: %@", postcode, suburb, state);
         [self.postcodes addObject:@{@"postcode": postcode, @"suburb": suburb, @"state": state}];
     }
+    NSLog(@"data loaded");
 }
 
 @end

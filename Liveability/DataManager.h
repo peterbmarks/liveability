@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString const * kDataLoadedNotification;
+
 @interface DataManager : NSObject
 
 @property (nonatomic) NSMutableArray *postcodes;
