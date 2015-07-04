@@ -17,6 +17,7 @@
     DataManager *_dataManager;
     NSArray *_filteredPostcodes;
     BOOL _pushedHere;
+    BOOL keyboardIsShown;
 }
 @end
 
@@ -43,6 +44,24 @@
     self.navigationItem.rightBarButtonItem = hereButton;
     self.detailViewController = (ShowMapViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    
+    // register for keyboard notifications
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(keyboardWillShow:)
+//                                                 name:UIKeyboardWillShowNotification
+//                                               object:self.view.window];
+//    // register for keyboard notifications
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(keyboardWillHide:)
+//                                                 name:UIKeyboardWillHideNotification
+//                                               object:self.view.window];
+//    keyboardIsShown = NO;
+
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -136,5 +155,53 @@
     [self.searchBar resignFirstResponder];
 }
 
+//- (void)keyboardWillShow:(NSNotification*)notification{
+//    if(keyboardIsShown) {
+//        return;
+//    }
+//    NSLog(@"%s", __func__);
+//    CGRect keyboardEndFrame;
+//    NSTimeInterval animationDuration;
+//    UIViewAnimationCurve animationCurve;
+//    NSDictionary *userInfo = [notification userInfo];
+//    [userInfo[UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+//    [userInfo[UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+//    [userInfo[UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
+//    
+//    UIEdgeInsets settingsTableInset = self.tableView.contentInset;
+//    CGPoint tableViewScreenSpace = [self.tableView.superview convertPoint:self.tableView.frame.origin toView:nil];
+//    CGFloat tableViewBottomOffset = CGRectGetHeight(self.view.bounds)-(tableViewScreenSpace.y+self.tableView.frame.size.height);
+//    settingsTableInset.bottom = CGRectGetHeight(keyboardEndFrame)-tableViewBottomOffset;
+//    
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationCurve:animationCurve];
+//    [UIView setAnimationDuration:animationDuration];
+//    [UIView setAnimationBeginsFromCurrentState:YES];
+//    self.tableView.contentInset = settingsTableInset;
+//    self.tableView.scrollIndicatorInsets = settingsTableInset;
+//    [UIView commitAnimations];
+//    keyboardIsShown = YES;
+//}
+//
+//- (void)keyboardWillHide:(NSNotification*)notification{
+//    if(!keyboardIsShown) {
+//        return;
+//    }
+//    NSLog(@"%s", __func__);
+//    NSTimeInterval animationDuration;
+//    UIViewAnimationCurve animationCurve;
+//    NSDictionary *userInfo = [notification userInfo];
+//    [userInfo[UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+//    [userInfo[UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+//    
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationCurve:animationCurve];
+//    [UIView setAnimationDuration:animationDuration];
+//    [UIView setAnimationBeginsFromCurrentState:YES];
+//    self.tableView.contentInset = UIEdgeInsetsZero;
+//    self.tableView.scrollIndicatorInsets = UIEdgeInsetsZero;
+//    [UIView commitAnimations];
+//    keyboardIsShown = NO;
+//}
 
 @end
