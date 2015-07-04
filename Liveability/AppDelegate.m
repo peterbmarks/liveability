@@ -29,7 +29,7 @@ alpha:1.0]
     splitViewController.delegate = self;
     
     self.dataManager = [DataManager new];
-    [[UIButton appearance] setTintColor:UIColorFromRGB(0x36b1bf)]; 
+    [[UIBarButtonItem appearance] setTintColor:UIColorFromRGB(0x36b1bf)];
     return YES;
 }
 
