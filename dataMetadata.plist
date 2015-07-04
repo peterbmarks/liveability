@@ -42,5 +42,16 @@
 		<key>isLga</key>
 		<true/>
 	</dict>
+	<key>Crime</key>
+	<dict>
+		<key>measurement</key>
+		<string>Crime</string>
+		<key>source</key>
+		<string>Burglary ACT data from March-June 2014.</string>
+		<key>url</key>
+		<string>http://egovau.blogspot.com.au/2014/08/act-crime-stats-data-ready-for-people.html</string>
+		<key>isLga</key>
+		<false/>
+	</dict>
 </dict>
 </plist>

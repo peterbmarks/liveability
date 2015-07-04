@@ -43,6 +43,8 @@
 		728DB9B81B46985200FBE1BD /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9B11B46985200FBE1BD /* FMDatabaseQueue.m */; };
 		728DB9B91B46985200FBE1BD /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9B41B46985200FBE1BD /* FMResultSet.m */; };
 		728DB9BB1B46986100FBE1BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */; };
+		729365BA1B487CAD00AF43B2 /* Crime.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 729365B91B487CAD00AF43B2 /* Crime.sqlite */; };
+		729365BC1B487D4400AF43B2 /* Crime.png in Resources */ = {isa = PBXBuildFile; fileRef = 729365BB1B487D4400AF43B2 /* Crime.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		728DB9B31B46985200FBE1BD /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		728DB9B41B46985200FBE1BD /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		729365B91B487CAD00AF43B2 /* Crime.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crime.sqlite; sourceTree = "<group>"; };
+		729365BB1B487D4400AF43B2 /* Crime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crime.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +253,8 @@
 				7241BCBB1B47BF3200703496 /* Diversity.png */,
 				7241BCBD1B47C4F000703496 /* Age.sqlite */,
 				7241BCBF1B47C54E00703496 /* Age.png */,
+				729365B91B487CAD00AF43B2 /* Crime.sqlite */,
+				729365BB1B487D4400AF43B2 /* Crime.png */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -363,6 +369,8 @@
 				7241BCC01B47C54E00703496 /* Age.png in Resources */,
 				728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */,
 				728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */,
+				729365BA1B487CAD00AF43B2 /* Crime.sqlite in Resources */,
+				729365BC1B487D4400AF43B2 /* Crime.png in Resources */,
 				7241BCBE1B47C4F000703496 /* Age.sqlite in Resources */,
 				7241BCBC1B47BF3200703496 /* Diversity.png in Resources */,
 				728DB98B1B46910C00FBE1BD /* Images.xcassets in Resources */,
