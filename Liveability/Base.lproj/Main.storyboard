@@ -83,20 +83,20 @@
                                                 <constraint firstAttribute="height" constant="22" id="f1p-Sh-oix"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nar-eh-XIG">
-                                            <rect key="frame" x="529" y="11" width="29" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nar-eh-XIG">
+                                            <rect key="frame" x="531.5" y="13" width="24" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="centerX" secondItem="nar-eh-XIG" secondAttribute="centerX" id="3dW-U5-FuB"/>
                                         <constraint firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" id="9bN-o4-HCU"/>
                                         <constraint firstItem="yeV-zr-1HN" firstAttribute="leading" secondItem="JqZ-ZK-8w9" secondAttribute="leadingMargin" id="QLN-ve-0m7"/>
+                                        <constraint firstItem="nar-eh-XIG" firstAttribute="centerX" secondItem="9Ie-DO-hnL" secondAttribute="centerX" id="RbA-AD-7x6"/>
+                                        <constraint firstItem="nar-eh-XIG" firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" constant="-0.5" id="h5F-CD-bh7"/>
                                         <constraint firstAttribute="centerY" secondItem="yeV-zr-1HN" secondAttribute="centerY" id="jpW-n9-yOd"/>
                                         <constraint firstItem="9Ie-DO-hnL" firstAttribute="trailing" secondItem="JqZ-ZK-8w9" secondAttribute="trailingMargin" id="mrf-B2-A3X"/>
-                                        <constraint firstAttribute="centerY" secondItem="nar-eh-XIG" secondAttribute="centerY" id="n2m-U0-WOh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

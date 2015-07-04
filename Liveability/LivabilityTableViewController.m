@@ -62,7 +62,7 @@
     // Configure the cell...
     Liveability *li = _livabilityFactorsArray[indexPath.row];
     cell.factorLabel.text = _dataSources[indexPath.row];    // title of the data
-    cell.percentileLabel.text = [NSString stringWithFormat:@"%d%%", li.percentile];
+    cell.percentileLabel.text = [NSString stringWithFormat:@"%ld%%", (long)li.percentile];
     return cell;
 }
 

@@ -76,10 +76,10 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
         l = [Liveability new];
         l.postcode = postcode;
         l.percentile = [s intForColumn:@"Percentile"];
-        l.measure = [s stringForColumn:@"state"];
+        l.measure = [s stringForColumn:@"Measurement"];
         l.measurement = [self.dataSources[sourceName][@"measurement"] intValue];
-        l.source = [s stringForColumn:@"source"];
-        l.url = [s stringForColumn:@"url"];
+        l.source = self.dataSources[sourceName][@"source"];
+        l.url = self.dataSources[sourceName][@"url"];
     } else {
         NSLog(@"No data found for postcode = %@", postcode);
     }
