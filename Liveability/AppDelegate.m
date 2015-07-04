@@ -30,6 +30,7 @@ alpha:1.0]
     
     self.dataManager = [DataManager new];
     [[UIBarButtonItem appearance] setTintColor:UIColorFromRGB(0x36b1bf)];
+    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(0x36b1bf)];
     return YES;
 }
 
