@@ -65,6 +65,7 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     Liveability * l = nil;
     NSString* filePath = [[NSBundle mainBundle] pathForResource:sourceName
                                                          ofType:@"sqlite"];
+    NSLog(@"Opening: %@, %@", sourceName, postcode);
     FMDatabase *db = [FMDatabase databaseWithPath:filePath];
     if(![db open]) {
         NSLog(@"Error opening the database at: %@", filePath);

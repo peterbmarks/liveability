@@ -104,7 +104,7 @@
     if(_filteredPostcodes.count) {
         pc = _filteredPostcodes[indexPath.row];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", pc.suburb, pc.state];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@ : %@", pc.suburb, pc.state, pc.postcode];
     return cell;
 }
 

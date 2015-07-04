@@ -11,5 +11,14 @@
 		<key>url</key>
 		<string>http://www.abs.gov.au/ausstats/abs@.nsf/Lookup/2033.0.55.001main+features100132011</string>
 	</dict>
+	<key>INCOME</key>
+	<dict>
+		<key>measurement</key>
+		<string>Taxable income 2012-13</string>
+		<key>source</key>
+		<string>Australian Taxation Office</string>
+		<key>url</key>
+		<string>http://www.data.gov.au/dataset/taxation-statistics-2012-13/resource/fc53a0c8-25e7-4024-b609-438a30b8d807</string>
+	</dict>
 </dict>
 </plist>

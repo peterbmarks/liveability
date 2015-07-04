@@ -36,9 +36,10 @@ alpha:1.0]
     _dataManager = appDelegate.dataManager;
     
     _livabilityFactorsArray = [NSMutableArray new];
-    _dataSources = @[@"SEIFANational", @"SEIFANational", @"SEIFANational", @"SEIFANational"];
+    _dataSources = @[@"SEIFANational", @"INCOME"];
     for(NSString *dataSource in _dataSources) {
         Liveability *li = [_dataManager loadLiveabilityData:dataSource forPostcode:self.postcode.postcode];
+        NSLog(@"%@ = %ld", dataSource, li.percentile);
         if(li) {
             [_livabilityFactorsArray addObject:li];
         }
