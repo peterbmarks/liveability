@@ -11,7 +11,7 @@
 
 @class Postcode;
 
-@interface ShowMapViewController : UIViewController <CLLocationManagerDelegate, MKReverseGeocoderDelegate>
+@interface ShowMapViewController : UIViewController <CLLocationManagerDelegate, MKReverseGeocoderDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) Postcode* detailItem;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

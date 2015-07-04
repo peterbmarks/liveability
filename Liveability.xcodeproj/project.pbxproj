@@ -16,6 +16,9 @@
 		727B28C71B47898D00E92584 /* SEIFANational.png in Resources */ = {isa = PBXBuildFile; fileRef = 727B28C61B47898D00E92584 /* SEIFANational.png */; };
 		727B28CB1B4796F400E92584 /* INCOME.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 727B28CA1B4796F400E92584 /* INCOME.sqlite */; };
 		727B28CD1B47977000E92584 /* INCOME.png in Resources */ = {isa = PBXBuildFile; fileRef = 727B28CC1B47977000E92584 /* INCOME.png */; };
+		727B28D01B479E0900E92584 /* SuburbOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28CF1B479E0900E92584 /* SuburbOverlay.m */; };
+		727B28D31B47A00200E92584 /* MapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28D21B47A00200E92584 /* MapOverlayView.m */; };
+		727B28D71B47A36600E92584 /* locationRing.png in Resources */ = {isa = PBXBuildFile; fileRef = 727B28D61B47A36600E92584 /* locationRing.png */; };
 		7284A60D1B471480003A28B7 /* Postcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7284A60C1B471480003A28B7 /* Postcode.m */; };
 		7284A60F1B471BC3003A28B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A60E1B471BC3003A28B7 /* MapKit.framework */; };
 		7284A6111B471BCC003A28B7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A6101B471BCC003A28B7 /* AddressBook.framework */; };
@@ -61,6 +64,11 @@
 		727B28C61B47898D00E92584 /* SEIFANational.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SEIFANational.png; sourceTree = "<group>"; };
 		727B28CA1B4796F400E92584 /* INCOME.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = INCOME.sqlite; sourceTree = "<group>"; };
 		727B28CC1B47977000E92584 /* INCOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = INCOME.png; sourceTree = "<group>"; };
+		727B28CE1B479E0900E92584 /* SuburbOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuburbOverlay.h; sourceTree = "<group>"; };
+		727B28CF1B479E0900E92584 /* SuburbOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuburbOverlay.m; sourceTree = "<group>"; };
+		727B28D11B47A00200E92584 /* MapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayView.h; sourceTree = "<group>"; };
+		727B28D21B47A00200E92584 /* MapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayView.m; sourceTree = "<group>"; };
+		727B28D61B47A36600E92584 /* locationRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationRing.png; sourceTree = "<group>"; };
 		7284A60B1B471480003A28B7 /* Postcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postcode.h; sourceTree = "<group>"; };
 		7284A60C1B471480003A28B7 /* Postcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postcode.m; sourceTree = "<group>"; };
 		7284A60E1B471BC3003A28B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -118,6 +126,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		727B28D41B47A04B00E92584 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				728DB9841B46910C00FBE1BD /* ShowMapViewController.h */,
+				728DB9851B46910C00FBE1BD /* ShowMapViewController.m */,
+				727B28CE1B479E0900E92584 /* SuburbOverlay.h */,
+				727B28CF1B479E0900E92584 /* SuburbOverlay.m */,
+				727B28D11B47A00200E92584 /* MapOverlayView.h */,
+				727B28D21B47A00200E92584 /* MapOverlayView.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		727B28D51B47A05D00E92584 /* Livability */ = {
+			isa = PBXGroup;
+			children = (
+				727B28B41B4752B400E92584 /* LivabilityTableViewController.h */,
+				727B28B51B4752B400E92584 /* LivabilityTableViewController.m */,
+				727B28B71B47551400E92584 /* LivabilityTableViewCell.h */,
+				727B28B81B47551400E92584 /* LivabilityTableViewCell.m */,
+				727B28BA1B47592F00E92584 /* Liveability.h */,
+				727B28BB1B47592F00E92584 /* Liveability.m */,
+			);
+			name = Livability;
+			sourceTree = "<group>";
+		};
 		728DB96E1B46910B00FBE1BD = {
 			isa = PBXGroup;
 			children = (
@@ -144,14 +178,8 @@
 				728DB97F1B46910C00FBE1BD /* AppDelegate.m */,
 				728DB9811B46910C00FBE1BD /* SuburblistViewController.h */,
 				728DB9821B46910C00FBE1BD /* SuburblistViewController.m */,
-				728DB9841B46910C00FBE1BD /* ShowMapViewController.h */,
-				728DB9851B46910C00FBE1BD /* ShowMapViewController.m */,
-				727B28B41B4752B400E92584 /* LivabilityTableViewController.h */,
-				727B28B51B4752B400E92584 /* LivabilityTableViewController.m */,
-				727B28B71B47551400E92584 /* LivabilityTableViewCell.h */,
-				727B28B81B47551400E92584 /* LivabilityTableViewCell.m */,
-				727B28BA1B47592F00E92584 /* Liveability.h */,
-				727B28BB1B47592F00E92584 /* Liveability.m */,
+				727B28D41B47A04B00E92584 /* Map */,
+				727B28D51B47A05D00E92584 /* Livability */,
 				727B28C11B47789100E92584 /* ShowDataSourceViewController.h */,
 				727B28C21B47789100E92584 /* ShowDataSourceViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
@@ -170,6 +198,7 @@
 		728DB97A1B46910C00FBE1BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				727B28D61B47A36600E92584 /* locationRing.png */,
 				7284A6101B471BCC003A28B7 /* AddressBook.framework */,
 				7284A60E1B471BC3003A28B7 /* MapKit.framework */,
 				728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */,
@@ -307,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727B28D71B47A36600E92584 /* locationRing.png in Resources */,
 				727B28CB1B4796F400E92584 /* INCOME.sqlite in Resources */,
 				727B28C71B47898D00E92584 /* SEIFANational.png in Resources */,
 				727B28BE1B47671100E92584 /* SEIFANational.sqlite in Resources */,
@@ -347,7 +377,9 @@
 				728DB9861B46910C00FBE1BD /* ShowMapViewController.m in Sources */,
 				7284A60D1B471480003A28B7 /* Postcode.m in Sources */,
 				727B28BC1B47592F00E92584 /* Liveability.m in Sources */,
+				727B28D31B47A00200E92584 /* MapOverlayView.m in Sources */,
 				728DB9B81B46985200FBE1BD /* FMDatabaseQueue.m in Sources */,
+				727B28D01B479E0900E92584 /* SuburbOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
