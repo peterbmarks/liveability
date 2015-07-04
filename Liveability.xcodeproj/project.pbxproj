@@ -10,6 +10,8 @@
 		7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7241BCB51B47AECD00703496 /* postcodeToLga.sqlite */; };
 		7241BCB81B47BBCB00703496 /* Diversity.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7241BCB71B47BBCB00703496 /* Diversity.sqlite */; };
 		7241BCBC1B47BF3200703496 /* Diversity.png in Resources */ = {isa = PBXBuildFile; fileRef = 7241BCBB1B47BF3200703496 /* Diversity.png */; };
+		7241BCBE1B47C4F000703496 /* Age.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7241BCBD1B47C4F000703496 /* Age.sqlite */; };
+		7241BCC01B47C54E00703496 /* Age.png in Resources */ = {isa = PBXBuildFile; fileRef = 7241BCBF1B47C54E00703496 /* Age.png */; };
 		727B28B61B4752B400E92584 /* LivabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B51B4752B400E92584 /* LivabilityTableViewController.m */; };
 		727B28B91B47551400E92584 /* LivabilityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B81B47551400E92584 /* LivabilityTableViewCell.m */; };
 		727B28BC1B47592F00E92584 /* Liveability.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28BB1B47592F00E92584 /* Liveability.m */; };
@@ -57,6 +59,8 @@
 		7241BCB51B47AECD00703496 /* postcodeToLga.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = postcodeToLga.sqlite; sourceTree = "<group>"; };
 		7241BCB71B47BBCB00703496 /* Diversity.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diversity.sqlite; sourceTree = "<group>"; };
 		7241BCBB1B47BF3200703496 /* Diversity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Diversity.png; sourceTree = "<group>"; };
+		7241BCBD1B47C4F000703496 /* Age.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Age.sqlite; sourceTree = "<group>"; };
+		7241BCBF1B47C54E00703496 /* Age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Age.png; sourceTree = "<group>"; };
 		727B28B41B4752B400E92584 /* LivabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewController.h; sourceTree = "<group>"; };
 		727B28B51B4752B400E92584 /* LivabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivabilityTableViewController.m; sourceTree = "<group>"; };
 		727B28B71B47551400E92584 /* LivabilityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewCell.h; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 				727B28CC1B47977000E92584 /* INCOME.png */,
 				7241BCB71B47BBCB00703496 /* Diversity.sqlite */,
 				7241BCBB1B47BF3200703496 /* Diversity.png */,
+				7241BCBD1B47C4F000703496 /* Age.sqlite */,
+				7241BCBF1B47C54E00703496 /* Age.png */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -354,8 +360,10 @@
 				727B28CD1B47977000E92584 /* INCOME.png in Resources */,
 				7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */,
 				728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */,
+				7241BCC01B47C54E00703496 /* Age.png in Resources */,
 				728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */,
 				728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */,
+				7241BCBE1B47C4F000703496 /* Age.sqlite in Resources */,
 				7241BCBC1B47BF3200703496 /* Diversity.png in Resources */,
 				728DB98B1B46910C00FBE1BD /* Images.xcassets in Resources */,
 			);
