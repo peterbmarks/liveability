@@ -32,7 +32,6 @@
 		728DB9831B46910C00FBE1BD /* SuburblistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9821B46910C00FBE1BD /* SuburblistViewController.m */; };
 		728DB9861B46910C00FBE1BD /* ShowMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9851B46910C00FBE1BD /* ShowMapViewController.m */; };
 		728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728DB9871B46910C00FBE1BD /* Main.storyboard */; };
-		728DB98B1B46910C00FBE1BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DB98A1B46910C00FBE1BD /* Images.xcassets */; };
 		728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */; };
 		728DB99A1B46910C00FBE1BD /* LiveabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DB9991B46910C00FBE1BD /* LiveabilityTests.m */; };
 		728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 728DB9A41B46980900FBE1BD /* postcodes.sqlite */; };
@@ -45,6 +44,7 @@
 		728DB9BB1B46986100FBE1BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */; };
 		729365BA1B487CAD00AF43B2 /* Crime.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 729365B91B487CAD00AF43B2 /* Crime.sqlite */; };
 		729365BC1B487D4400AF43B2 /* Crime.png in Resources */ = {isa = PBXBuildFile; fileRef = 729365BB1B487D4400AF43B2 /* Crime.png */; };
+		729365BE1B487DEB00AF43B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729365BD1B487DEB00AF43B2 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,6 @@
 		728DB9841B46910C00FBE1BD /* ShowMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowMapViewController.h; sourceTree = "<group>"; };
 		728DB9851B46910C00FBE1BD /* ShowMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowMapViewController.m; sourceTree = "<group>"; };
 		728DB9881B46910C00FBE1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		728DB98A1B46910C00FBE1BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		728DB98D1B46910C00FBE1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		728DB9931B46910C00FBE1BD /* LiveabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728DB9981B46910C00FBE1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +116,7 @@
 		728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		729365B91B487CAD00AF43B2 /* Crime.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crime.sqlite; sourceTree = "<group>"; };
 		729365BB1B487D4400AF43B2 /* Crime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crime.png; sourceTree = "<group>"; };
+		729365BD1B487DEB00AF43B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +197,7 @@
 				727B28C11B47789100E92584 /* ShowDataSourceViewController.h */,
 				727B28C21B47789100E92584 /* ShowDataSourceViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
-				728DB98A1B46910C00FBE1BD /* Images.xcassets */,
+				729365BD1B487DEB00AF43B2 /* Media.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
 				728DB97A1B46910C00FBE1BD /* Supporting Files */,
 				728DB9A61B46982D00FBE1BD /* DataManager.h */,
@@ -373,7 +373,7 @@
 				729365BC1B487D4400AF43B2 /* Crime.png in Resources */,
 				7241BCBE1B47C4F000703496 /* Age.sqlite in Resources */,
 				7241BCBC1B47BF3200703496 /* Diversity.png in Resources */,
-				728DB98B1B46910C00FBE1BD /* Images.xcassets in Resources */,
+				729365BE1B487DEB00AF43B2 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
