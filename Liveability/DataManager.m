@@ -74,6 +74,7 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     FMResultSet *s = [db executeQuery:@"SELECT Percentile, Measurement FROM liveability WHERE Postcode = ?", postcode];
     if ([s next]) {
         l = [Liveability new];
+        l.dataSource = sourceName;
         l.postcode = postcode;
         l.percentile = [s intForColumn:@"Percentile"];
         l.measure = [s stringForColumn:@"Measurement"];

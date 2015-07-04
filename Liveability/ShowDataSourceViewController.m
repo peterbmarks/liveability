@@ -18,8 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.textView.text = [NSString stringWithFormat:@"Data from: %@", self.livability.source];
+    self.textView.text = [NSString stringWithFormat:@"Data from: %@\nActual measurement: %@", self.livability.source, self.livability.measure];
     self.navigationController.navigationItem.title = self.suburb;
+    UIImage *image = [UIImage imageNamed:self.livability.dataSource];
+    if(!image) {
+        NSLog(@"Error: unabel to load image %@", self.livability.dataSource);
+    }
+    self.sourceLogoImageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,5 +41,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onDataSourceButton:(id)sender {
+    NSString *urlString = self.livability.url;
+    NSLog(@"opening source: %@", urlString);
+    NSURL *url = [NSURL URLWithString:urlString];
+    if(url) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
 
 @end

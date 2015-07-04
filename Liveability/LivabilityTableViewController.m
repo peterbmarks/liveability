@@ -14,6 +14,12 @@
 #import "Postcode.h"
 #import "ShowDataSourceViewController.h"
 
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
 @interface LivabilityTableViewController ()
 {
     NSArray *_dataSources;  // names of the datasources we will display
@@ -30,7 +36,7 @@
     _dataManager = appDelegate.dataManager;
     
     _livabilityFactorsArray = [NSMutableArray new];
-    _dataSources = @[@"SEIFANational"];
+    _dataSources = @[@"SEIFANational", @"SEIFANational", @"SEIFANational", @"SEIFANational"];
     for(NSString *dataSource in _dataSources) {
         Liveability *li = [_dataManager loadLiveabilityData:dataSource forPostcode:self.postcode.postcode];
         if(li) {
@@ -64,10 +70,25 @@
     Liveability *li = _livabilityFactorsArray[indexPath.row];
     cell.factorLabel.text = _dataSources[indexPath.row];    // title of the data
     cell.percentileLabel.text = [NSString stringWithFormat:@"%ld%%", (long)li.percentile];
+    cell.goodnessView.backgroundColor = [self colourForGoodness:li.percentile];
     return cell;
 }
 
-
+- (UIColor *)colourForGoodness:(NSInteger)percentile {
+    UIColor *colour = [UIColor blackColor];
+    if(percentile < 25) {
+        colour = UIColorFromRGB(0xf2385a);
+    } else if(percentile < 50) {
+        colour = UIColorFromRGB(0xf5a503);
+    }
+    else if(percentile < 75) {
+        colour = UIColorFromRGB(0x4ad9d9);
+    }
+    else {
+        colour = UIColorFromRGB(0x36b1bf);
+    }
+    return colour;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

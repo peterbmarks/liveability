@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic) Liveability *livability;
 @property (nonatomic) NSString *suburb;
+@property (weak, nonatomic) IBOutlet UIImageView *sourceLogoImageView;
 
 @end

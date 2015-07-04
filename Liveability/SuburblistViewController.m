@@ -111,8 +111,6 @@
 #pragma mark - UISearchBar Delegate Methods
 - (void)searchBar:(UISearchBar *)searchBar
     textDidChange:(NSString *)searchText {
-    NSLog(@"%s", __func__);
-    NSLog(@"search text = %@", searchText);
     if(searchText.length) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.suburb contains[c] %@",searchText];
         _filteredPostcodes = [NSMutableArray arrayWithArray:[_dataManager.postcodes filteredArrayUsingPredicate:predicate]];
