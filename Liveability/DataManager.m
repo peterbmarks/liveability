@@ -26,6 +26,7 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     if (self) {
         self.postcodes = [NSMutableArray new];
         [self readPostcodes];
+        [self loadDataSources];
     }
     return self;
 }
@@ -51,6 +52,12 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
         [self.postcodes addObject:pc];
     }
     NSLog(@"data loaded");
+}
+
+- (void)loadDataSources {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"dataMetadata" ofType:@"plist"];
+    self.dataSources = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    // NSLog(@"loaded: %@", self.dataSources);
 }
 
 @end

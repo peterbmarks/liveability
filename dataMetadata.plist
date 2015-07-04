@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SEIFANational</key>
+	<dict>
+		<key>measurement</key>
+		<string>SEIFA Score</string>
+		<key>source</key>
+		<string>ABS 2033.0.55.001</string>
+		<key>url</key>
+		<string>http://www.abs.gov.au/ausstats/abs@.nsf/Lookup/2033.0.55.001main+features100132011</string>
+	</dict>
+</dict>
+</plist>

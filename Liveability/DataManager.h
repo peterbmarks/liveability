@@ -13,4 +13,6 @@ extern NSString const * kDataLoadedNotification;
 @interface DataManager : NSObject
 
 @property (nonatomic) NSMutableArray *postcodes;
+@property (nonatomic) NSDictionary *dataSources;
+
 @end
