@@ -46,6 +46,7 @@
 		729365BC1B487D4400AF43B2 /* Crime.png in Resources */ = {isa = PBXBuildFile; fileRef = 729365BB1B487D4400AF43B2 /* Crime.png */; };
 		729365BE1B487DEB00AF43B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729365BD1B487DEB00AF43B2 /* Media.xcassets */; };
 		729365C41B4881D500AF43B2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729365C31B4881D500AF43B2 /* Icons.xcassets */; };
+		72F3AFC31B4889E4008297BC /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F3AFC21B4889E4008297BC /* Launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		729365BB1B487D4400AF43B2 /* Crime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crime.png; sourceTree = "<group>"; };
 		729365BD1B487DEB00AF43B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		729365C31B4881D500AF43B2 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		72F3AFC21B4889E4008297BC /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				729365BD1B487DEB00AF43B2 /* Media.xcassets */,
 				729365C31B4881D500AF43B2 /* Icons.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
+				72F3AFC21B4889E4008297BC /* Launch.png */,
 				728DB97A1B46910C00FBE1BD /* Supporting Files */,
 				728DB9A61B46982D00FBE1BD /* DataManager.h */,
 				728DB9A71B46982D00FBE1BD /* DataManager.m */,
@@ -364,6 +367,7 @@
 				727B28CB1B4796F400E92584 /* INCOME.sqlite in Resources */,
 				727B28C71B47898D00E92584 /* SEIFA National.png in Resources */,
 				7241BCB81B47BBCB00703496 /* Diversity.sqlite in Resources */,
+				72F3AFC31B4889E4008297BC /* Launch.png in Resources */,
 				727B28BE1B47671100E92584 /* SEIFA National.sqlite in Resources */,
 				727B28C01B47673B00E92584 /* dataMetadata.plist in Resources */,
 				727B28CD1B47977000E92584 /* INCOME.png in Resources */,
