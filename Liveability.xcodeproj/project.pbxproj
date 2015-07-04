@@ -45,6 +45,7 @@
 		729365BA1B487CAD00AF43B2 /* Crime.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 729365B91B487CAD00AF43B2 /* Crime.sqlite */; };
 		729365BC1B487D4400AF43B2 /* Crime.png in Resources */ = {isa = PBXBuildFile; fileRef = 729365BB1B487D4400AF43B2 /* Crime.png */; };
 		729365BE1B487DEB00AF43B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729365BD1B487DEB00AF43B2 /* Media.xcassets */; };
+		729365C41B4881D500AF43B2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729365C31B4881D500AF43B2 /* Icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		729365B91B487CAD00AF43B2 /* Crime.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crime.sqlite; sourceTree = "<group>"; };
 		729365BB1B487D4400AF43B2 /* Crime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crime.png; sourceTree = "<group>"; };
 		729365BD1B487DEB00AF43B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		729365C31B4881D500AF43B2 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				727B28C21B47789100E92584 /* ShowDataSourceViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
 				729365BD1B487DEB00AF43B2 /* Media.xcassets */,
+				729365C31B4881D500AF43B2 /* Icons.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
 				728DB97A1B46910C00FBE1BD /* Supporting Files */,
 				728DB9A61B46982D00FBE1BD /* DataManager.h */,
@@ -367,6 +370,7 @@
 				7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */,
 				728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */,
 				7241BCC01B47C54E00703496 /* Age.png in Resources */,
+				729365C41B4881D500AF43B2 /* Icons.xcassets in Resources */,
 				728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */,
 				728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */,
 				729365BA1B487CAD00AF43B2 /* Crime.sqlite in Resources */,

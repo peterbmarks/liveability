@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *factorLabel;
 @property (weak, nonatomic) IBOutlet UIView *goodnessView;
 @property (weak, nonatomic) IBOutlet UILabel *percentileLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
 @end

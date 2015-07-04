@@ -64,24 +64,18 @@
         <scene sceneID="Nlg-kF-tZe">
             <objects>
                 <tableViewController id="6Kv-sE-xfu" customClass="LivabilityTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qqT-ws-dwc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="22" sectionFooterHeight="22" id="qqT-ws-dwc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="livabilityCell" id="6zu-dq-cvG" customClass="LivabilityTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="livabilityCell" rowHeight="63" id="6zu-dq-cvG" customClass="LivabilityTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6zu-dq-cvG" id="JqZ-ZK-8w9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FactorLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-zr-1HN">
-                                            <rect key="frame" x="8" y="11" width="91.5" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ie-DO-hnL">
-                                            <rect key="frame" x="495" y="11" width="97" height="22"/>
+                                            <rect key="frame" x="495" y="21" width="97" height="21.5"/>
                                             <color key="backgroundColor" red="0.50607556446075219" green="1" blue="0.065009806832465045" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="97" id="VJ6-r5-bJE"/>
@@ -89,16 +83,31 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nar-eh-XIG">
-                                            <rect key="frame" x="531.5" y="13" width="24" height="17"/>
+                                            <rect key="frame" x="531" y="23" width="24" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NetspeedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XQY-yU-5RY">
+                                            <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="48" id="axd-pt-Yji"/>
+                                                <constraint firstAttribute="height" constant="48" id="mTO-ua-TP7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FactorLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-zr-1HN">
+                                            <rect key="frame" x="64" y="21" width="91.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="XQY-yU-5RY" firstAttribute="leading" secondItem="JqZ-ZK-8w9" secondAttribute="leadingMargin" id="70U-2b-eHG"/>
                                         <constraint firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" id="9bN-o4-HCU"/>
-                                        <constraint firstItem="yeV-zr-1HN" firstAttribute="leading" secondItem="JqZ-ZK-8w9" secondAttribute="leadingMargin" id="QLN-ve-0m7"/>
+                                        <constraint firstAttribute="centerY" secondItem="XQY-yU-5RY" secondAttribute="centerY" id="Ozr-JL-3jK"/>
                                         <constraint firstItem="nar-eh-XIG" firstAttribute="centerX" secondItem="9Ie-DO-hnL" secondAttribute="centerX" id="RbA-AD-7x6"/>
+                                        <constraint firstItem="yeV-zr-1HN" firstAttribute="leading" secondItem="XQY-yU-5RY" secondAttribute="trailing" constant="8" id="Ybd-d0-4zV"/>
                                         <constraint firstItem="nar-eh-XIG" firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" constant="-0.5" id="h5F-CD-bh7"/>
                                         <constraint firstAttribute="centerY" secondItem="yeV-zr-1HN" secondAttribute="centerY" id="jpW-n9-yOd"/>
                                         <constraint firstItem="9Ie-DO-hnL" firstAttribute="trailing" secondItem="JqZ-ZK-8w9" secondAttribute="trailingMargin" id="mrf-B2-A3X"/>
@@ -107,6 +116,7 @@
                                 <connections>
                                     <outlet property="factorLabel" destination="yeV-zr-1HN" id="wK9-rY-LFa"/>
                                     <outlet property="goodnessView" destination="9Ie-DO-hnL" id="72H-pN-jyp"/>
+                                    <outlet property="iconImage" destination="XQY-yU-5RY" id="bsY-Nm-sqQ"/>
                                     <outlet property="percentileLabel" destination="nar-eh-XIG" id="R4z-Gf-azf"/>
                                     <segue destination="R2w-NU-PVG" kind="show" identifier="showDataSource" id="wMa-V8-2fp"/>
                                 </connections>
@@ -270,6 +280,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NetspeedIcon" width="48" height="48"/>
         <image name="SEIFANational.png" width="1032" height="858"/>
         <image name="locationRing.png" width="178" height="178"/>
     </resources>
