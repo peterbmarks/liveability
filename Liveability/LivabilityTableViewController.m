@@ -37,7 +37,7 @@ alpha:1.0]
     NSArray *lgas = [_dataManager lgasForPostcode:self.postcode.postcode];
     NSLog(@"postcode: %@ has lgas: %@", self.postcode.postcode, lgas);
     _livabilityFactorsArray = [NSMutableArray new];
-    _dataSources = @[@"SEIFANational", @"INCOME", @"Diversity"];
+    _dataSources = @[@"SEIFA National", @"INCOME", @"Diversity"];
     for(NSString *dataSource in _dataSources) {
         BOOL isLga = [_dataManager.dataSources[dataSource][@"isLga"] boolValue];
         if(isLga) {
@@ -95,7 +95,7 @@ alpha:1.0]
     } else if(percentile < 50) {
         colour = UIColorFromRGB(0xf5a503);
     }
-    else if(percentile < 75) {
+    else if(percentile < 80) {
         colour = UIColorFromRGB(0x4ad9d9);
     }
     else {
