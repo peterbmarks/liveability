@@ -89,4 +89,23 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     return l;
 }
 
+// there may be several lga's for a postcode so get them in an array
+- (NSArray *)lgasForPostcode:(NSString *)postcode {
+    NSMutableArray *lgas = [NSMutableArray new];
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"postcodeToLga"
+                                                         ofType:@"sqlite"];
+    FMDatabase *db = [FMDatabase databaseWithPath:filePath];
+    if(![db open]) {
+        NSLog(@"Error opening the database at: %@", filePath);
+    }
+    NSLog(@"db opened");
+    // postcode, suburb, state, latitude, longitude
+    FMResultSet *s = [db executeQuery:@"SELECT lga FROM p2l WHERE postcode = ?", postcode];
+    while ([s next]) {
+        NSString *lga = [s stringForColumn:@"lga"];
+        [lgas addObject:lga];
+    }
+    NSLog(@"found %ld lgas for postcode: %@", lgas.count, postcode);
+    return lgas;
+}
 @end

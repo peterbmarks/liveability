@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7241BCB51B47AECD00703496 /* postcodeToLga.sqlite */; };
 		727B28B61B4752B400E92584 /* LivabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B51B4752B400E92584 /* LivabilityTableViewController.m */; };
 		727B28B91B47551400E92584 /* LivabilityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B81B47551400E92584 /* LivabilityTableViewCell.m */; };
 		727B28BC1B47592F00E92584 /* Liveability.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28BB1B47592F00E92584 /* Liveability.m */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7241BCB51B47AECD00703496 /* postcodeToLga.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = postcodeToLga.sqlite; sourceTree = "<group>"; };
 		727B28B41B4752B400E92584 /* LivabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewController.h; sourceTree = "<group>"; };
 		727B28B51B4752B400E92584 /* LivabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivabilityTableViewController.m; sourceTree = "<group>"; };
 		727B28B71B47551400E92584 /* LivabilityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewCell.h; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				728DB9A41B46980900FBE1BD /* postcodes.sqlite */,
+				7241BCB51B47AECD00703496 /* postcodeToLga.sqlite */,
 				727B28BF1B47673B00E92584 /* dataMetadata.plist */,
 				727B28BD1B47671100E92584 /* SEIFANational.sqlite */,
 				727B28C61B47898D00E92584 /* SEIFANational.png */,
@@ -342,6 +345,7 @@
 				727B28BE1B47671100E92584 /* SEIFANational.sqlite in Resources */,
 				727B28C01B47673B00E92584 /* dataMetadata.plist in Resources */,
 				727B28CD1B47977000E92584 /* INCOME.png in Resources */,
+				7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */,
 				728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */,
 				728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */,
 				728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */,

@@ -34,7 +34,8 @@ alpha:1.0]
     [super viewDidLoad];
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     _dataManager = appDelegate.dataManager;
-    
+    NSArray *lgas = [_dataManager lgasForPostcode:self.postcode.postcode];
+    NSLog(@"postcode: %@ has lgas: %@", self.postcode.postcode, lgas);
     _livabilityFactorsArray = [NSMutableArray new];
     _dataSources = @[@"SEIFANational", @"INCOME"];
     for(NSString *dataSource in _dataSources) {
