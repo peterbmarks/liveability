@@ -84,8 +84,9 @@ alpha:1.0]
     Liveability *li = _livabilityFactorsArray[indexPath.row];
     cell.factorLabel.text = li.dataSource;    // title of the data
     cell.percentileLabel.text = [NSString stringWithFormat:@"%ld%%", (long)li.percentile];
+    cell.lgaLabel.hidden = !li.lga;
     if(li.lga) {
-        cell.factorLabel.text = [cell.factorLabel.text stringByAppendingString:[NSString stringWithFormat:@" (lga: %@)", li.lga]];
+        cell.lgaLabel.text = [NSString stringWithFormat:@"LGA: %@", li.lga];
     }
     cell.goodnessView.backgroundColor = [self colourForGoodness:li.percentile];
     cell.iconImage.image  = [UIImage imageNamed:_dataManager.dataSources[li.dataSource][@"icon"]];

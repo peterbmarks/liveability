@@ -101,15 +101,23 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LGA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-uY-INw">
+                                            <rect key="frame" x="163" y="24" width="24.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.11750315656565657" green="0.11750315656565657" blue="0.11750315656565657" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="XQY-yU-5RY" firstAttribute="leading" secondItem="JqZ-ZK-8w9" secondAttribute="leadingMargin" id="70U-2b-eHG"/>
                                         <constraint firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" id="9bN-o4-HCU"/>
+                                        <constraint firstItem="CFt-uY-INw" firstAttribute="leading" secondItem="yeV-zr-1HN" secondAttribute="trailing" constant="7.5" id="Iiu-FM-f3Z"/>
                                         <constraint firstAttribute="centerY" secondItem="XQY-yU-5RY" secondAttribute="centerY" id="Ozr-JL-3jK"/>
                                         <constraint firstItem="nar-eh-XIG" firstAttribute="centerX" secondItem="9Ie-DO-hnL" secondAttribute="centerX" id="RbA-AD-7x6"/>
                                         <constraint firstItem="yeV-zr-1HN" firstAttribute="leading" secondItem="XQY-yU-5RY" secondAttribute="trailing" constant="8" id="Ybd-d0-4zV"/>
                                         <constraint firstItem="nar-eh-XIG" firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" constant="-0.5" id="h5F-CD-bh7"/>
                                         <constraint firstAttribute="centerY" secondItem="yeV-zr-1HN" secondAttribute="centerY" id="jpW-n9-yOd"/>
+                                        <constraint firstItem="CFt-uY-INw" firstAttribute="centerY" secondItem="yeV-zr-1HN" secondAttribute="centerY" id="keT-iK-4ZH"/>
                                         <constraint firstItem="9Ie-DO-hnL" firstAttribute="trailing" secondItem="JqZ-ZK-8w9" secondAttribute="trailingMargin" id="mrf-B2-A3X"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -117,6 +125,7 @@
                                     <outlet property="factorLabel" destination="yeV-zr-1HN" id="wK9-rY-LFa"/>
                                     <outlet property="goodnessView" destination="9Ie-DO-hnL" id="72H-pN-jyp"/>
                                     <outlet property="iconImage" destination="XQY-yU-5RY" id="bsY-Nm-sqQ"/>
+                                    <outlet property="lgaLabel" destination="CFt-uY-INw" id="Yto-Sf-cfc"/>
                                     <outlet property="percentileLabel" destination="nar-eh-XIG" id="R4z-Gf-azf"/>
                                     <segue destination="R2w-NU-PVG" kind="show" identifier="showDataSource" id="wMa-V8-2fp"/>
                                 </connections>
