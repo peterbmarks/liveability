@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.textView.text = [NSString stringWithFormat:@"Data from: %@\nMeasurement: %@ = %ld", self.livability.source, self.livability.measure, (long)self.livability.measureValue];
+    self.textView.text = [NSString stringWithFormat:@"Data from: %@\nMeasurement: %@ = %ld\n\n(Tap logo to visit site).", self.livability.source, self.livability.measure, (long)self.livability.measureValue];
     self.navigationController.navigationItem.title = self.suburb;
     UIImage *image = [UIImage imageNamed:self.livability.dataSource];
     if(!image) {
