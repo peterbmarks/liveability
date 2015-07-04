@@ -10,6 +10,8 @@
 		<string>ABS 2033.0.55.001</string>
 		<key>url</key>
 		<string>http://www.abs.gov.au/ausstats/abs@.nsf/Lookup/2033.0.55.001main+features100132011</string>
+		<key>icon</key>
+		<string>CrimeIcon</string>
 	</dict>
 	<key>INCOME</key>
 	<dict>
@@ -19,6 +21,8 @@
 		<string>Australian Taxation Office</string>
 		<key>url</key>
 		<string>http://www.data.gov.au/dataset/taxation-statistics-2012-13/resource/fc53a0c8-25e7-4024-b609-438a30b8d807</string>
+		<key>icon</key>
+		<string>IncomeIcon</string>
 	</dict>
 	<key>Diversity</key>
 	<dict>
@@ -30,6 +34,8 @@
 		<string>http://stat.abs.gov.au/Index.aspx?DataSetCode=ABS_CENSUS2011_B13_LGA</string>
 		<key>isLga</key>
 		<true/>
+		<key>icon</key>
+		<string>DiversityIcon</string>
 	</dict>
 	<key>Age</key>
 	<dict>
@@ -41,6 +47,8 @@
 		<string>http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/3235.02013?OpenDocument</string>
 		<key>isLga</key>
 		<true/>
+		<key>icon</key>
+		<string>AirIcon</string>
 	</dict>
 	<key>Crime</key>
 	<dict>
@@ -52,6 +60,8 @@
 		<string>http://egovau.blogspot.com.au/2014/08/act-crime-stats-data-ready-for-people.html</string>
 		<key>isLga</key>
 		<false/>
+		<key>icon</key>
+		<string>CrimeIcon</string>
 	</dict>
 </dict>
 </plist>

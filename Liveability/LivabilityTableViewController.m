@@ -88,6 +88,7 @@ alpha:1.0]
         cell.factorLabel.text = [cell.factorLabel.text stringByAppendingString:[NSString stringWithFormat:@" (lga: %@)", li.lga]];
     }
     cell.goodnessView.backgroundColor = [self colourForGoodness:li.percentile];
+    cell.iconImage.image  = [UIImage imageNamed:_dataManager.dataSources[li.dataSource][@"icon"]];
     return cell;
 }
 
