@@ -31,5 +31,16 @@
 		<key>isLga</key>
 		<true/>
 	</dict>
+	<key>Age</key>
+	<dict>
+		<key>measurement</key>
+		<string>Years</string>
+		<key>source</key>
+		<string>ABS: Median Ages</string>
+		<key>url</key>
+		<string>http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/3235.02013?OpenDocument</string>
+		<key>isLga</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

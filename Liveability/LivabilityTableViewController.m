@@ -37,7 +37,7 @@ alpha:1.0]
     NSArray *lgas = [_dataManager lgasForPostcode:self.postcode.postcode];
     NSLog(@"postcode: %@ has lgas: %@", self.postcode.postcode, lgas);
     _livabilityFactorsArray = [NSMutableArray new];
-    _dataSources = @[@"SEIFA National", @"INCOME", @"Diversity"];
+    _dataSources = @[@"SEIFA National", @"INCOME", @"Diversity", @"Age"];
     for(NSString *dataSource in _dataSources) {
         BOOL isLga = [_dataManager.dataSources[dataSource][@"isLga"] boolValue];
         if(isLga) {
@@ -82,8 +82,11 @@ alpha:1.0]
     
     // Configure the cell...
     Liveability *li = _livabilityFactorsArray[indexPath.row];
-    cell.factorLabel.text = _dataSources[indexPath.row];    // title of the data
+    cell.factorLabel.text = li.dataSource;    // title of the data
     cell.percentileLabel.text = [NSString stringWithFormat:@"%ld%%", (long)li.percentile];
+    if(li.lga) {
+        cell.factorLabel.text = [cell.factorLabel.text stringByAppendingString:[NSString stringWithFormat:@" (lga: %@)", li.lga]];
+    }
     cell.goodnessView.backgroundColor = [self colourForGoodness:li.percentile];
     return cell;
 }
