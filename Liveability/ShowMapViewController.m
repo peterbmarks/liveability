@@ -172,6 +172,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
 
 - (void)mapView:(MKMapView *)mapView
 regionDidChangeAnimated:(BOOL)animated {
+    return;
+    
     NSLog(@"%s", __func__);
     CLLocation *location = [[CLLocation alloc] initWithLatitude:self.mapView.centerCoordinate.latitude longitude:self.mapView.centerCoordinate.longitude];
     if(self.mapView.centerCoordinate.latitude == 0.0) {
