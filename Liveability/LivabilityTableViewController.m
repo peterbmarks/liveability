@@ -37,12 +37,24 @@ alpha:1.0]
     NSArray *lgas = [_dataManager lgasForPostcode:self.postcode.postcode];
     NSLog(@"postcode: %@ has lgas: %@", self.postcode.postcode, lgas);
     _livabilityFactorsArray = [NSMutableArray new];
-    _dataSources = @[@"SEIFANational", @"INCOME"];
+    _dataSources = @[@"SEIFANational", @"INCOME", @"Diversity"];
     for(NSString *dataSource in _dataSources) {
-        Liveability *li = [_dataManager loadLiveabilityData:dataSource forPostcode:self.postcode.postcode];
-        NSLog(@"%@ = %ld", dataSource, li.percentile);
-        if(li) {
-            [_livabilityFactorsArray addObject:li];
+        BOOL isLga = [_dataManager.dataSources[dataSource][@"isLga"] boolValue];
+        if(isLga) {
+            NSLog(@"%@ is an lga source", dataSource);
+            for(NSString *lga in lgas) {
+                Liveability *li = [_dataManager loadLiveabilityData:dataSource forLga:lga];
+                NSLog(@"%@ = %ld", dataSource, li.percentile);
+                if(li) {
+                    [_livabilityFactorsArray addObject:li];
+                }
+            }
+        } else {
+            Liveability *li = [_dataManager loadLiveabilityData:dataSource forPostcode:self.postcode.postcode];
+            NSLog(@"%@ = %ld", dataSource, li.percentile);
+            if(li) {
+                [_livabilityFactorsArray addObject:li];
+            }
         }
     }
 }

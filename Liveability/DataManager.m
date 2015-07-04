@@ -108,4 +108,33 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     NSLog(@"found %ld lgas for postcode: %@", lgas.count, postcode);
     return lgas;
 }
+
+- (Liveability *)loadLiveabilityData:(NSString *)sourceName forLga:(NSString *)lga {
+    Liveability * l = nil;
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:sourceName
+                                                         ofType:@"sqlite"];
+    NSLog(@"Opening: %@, %@", sourceName, lga);
+    FMDatabase *db = [FMDatabase databaseWithPath:filePath];
+    if(![db open]) {
+        NSLog(@"Error opening the database at: %@", filePath);
+    }
+    NSLog(@"db opened");
+    // postcode, suburb, state, latitude, longitude
+    FMResultSet *s = [db executeQuery:@"SELECT Percentile, Measurement FROM liveability WHERE LGA = ?", lga];
+    if ([s next]) {
+        l = [Liveability new];
+        l.dataSource = sourceName;
+        l.lga = lga;
+        l.percentile = [s intForColumn:@"Percentile"];
+        l.measure = self.dataSources[sourceName][@"measurement"];   // what we are measuring
+        l.measureValue = [s intForColumn:@"Measurement"];   // the value
+        l.source = self.dataSources[sourceName][@"source"];
+        l.url = self.dataSources[sourceName][@"url"];
+    } else {
+        NSLog(@"No data found for lga = %@", lga);
+    }
+    NSLog(@"data loaded");
+    return l;
+}
+
 @end

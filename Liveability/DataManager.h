@@ -18,6 +18,7 @@ extern NSString const * kDataLoadedNotification;
 @property (nonatomic) NSDictionary *dataSources;
 
 - (Liveability *)loadLiveabilityData:(NSString *)sourceName forPostcode:(NSString *)postcode;
+- (Liveability *)loadLiveabilityData:(NSString *)sourceName forLga:(NSString *)lga;
 - (NSArray *)lgasForPostcode:(NSString *)postcode;
 
 @end

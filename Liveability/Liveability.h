@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString *dataSource;
 @property (nonatomic) NSString *postcode;
+@property (nonatomic) NSString *lga;
 @property (nonatomic) NSInteger percentile;  // out of 100
 @property (nonatomic) NSString *measure;    // what is the thing we're measuring
 @property (nonatomic) NSInteger measureValue;    // the actual value

@@ -20,14 +20,16 @@
 		<key>url</key>
 		<string>http://www.data.gov.au/dataset/taxation-statistics-2012-13/resource/fc53a0c8-25e7-4024-b609-438a30b8d807</string>
 	</dict>
-	<key>DIVERSITY</key>
+	<key>Diversity</key>
 	<dict>
 		<key>measurement</key>
-		<string>Taxable income 2012-13</string>
+		<string>Number of languages</string>
 		<key>source</key>
 		<string>ABS: B13 Language Spoken at Home by Sex</string>
 		<key>url</key>
 		<string>http://stat.abs.gov.au/Index.aspx?DataSetCode=ABS_CENSUS2011_B13_LGA</string>
+		<key>isLga</key>
+		<true/>
 	</dict>
 </dict>
 </plist>
