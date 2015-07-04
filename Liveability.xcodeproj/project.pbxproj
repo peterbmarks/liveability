@@ -15,6 +15,7 @@
 		727B28C31B47789100E92584 /* ShowDataSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28C21B47789100E92584 /* ShowDataSourceViewController.m */; };
 		727B28C71B47898D00E92584 /* SEIFANational.png in Resources */ = {isa = PBXBuildFile; fileRef = 727B28C61B47898D00E92584 /* SEIFANational.png */; };
 		727B28CB1B4796F400E92584 /* INCOME.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 727B28CA1B4796F400E92584 /* INCOME.sqlite */; };
+		727B28CD1B47977000E92584 /* INCOME.png in Resources */ = {isa = PBXBuildFile; fileRef = 727B28CC1B47977000E92584 /* INCOME.png */; };
 		7284A60D1B471480003A28B7 /* Postcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7284A60C1B471480003A28B7 /* Postcode.m */; };
 		7284A60F1B471BC3003A28B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A60E1B471BC3003A28B7 /* MapKit.framework */; };
 		7284A6111B471BCC003A28B7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A6101B471BCC003A28B7 /* AddressBook.framework */; };
@@ -59,6 +60,7 @@
 		727B28C21B47789100E92584 /* ShowDataSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDataSourceViewController.m; sourceTree = "<group>"; };
 		727B28C61B47898D00E92584 /* SEIFANational.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SEIFANational.png; sourceTree = "<group>"; };
 		727B28CA1B4796F400E92584 /* INCOME.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = INCOME.sqlite; sourceTree = "<group>"; };
+		727B28CC1B47977000E92584 /* INCOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = INCOME.png; sourceTree = "<group>"; };
 		7284A60B1B471480003A28B7 /* Postcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postcode.h; sourceTree = "<group>"; };
 		7284A60C1B471480003A28B7 /* Postcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postcode.m; sourceTree = "<group>"; };
 		7284A60E1B471BC3003A28B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -202,6 +204,7 @@
 				727B28BD1B47671100E92584 /* SEIFANational.sqlite */,
 				727B28C61B47898D00E92584 /* SEIFANational.png */,
 				727B28CA1B4796F400E92584 /* INCOME.sqlite */,
+				727B28CC1B47977000E92584 /* INCOME.png */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				727B28C71B47898D00E92584 /* SEIFANational.png in Resources */,
 				727B28BE1B47671100E92584 /* SEIFANational.sqlite in Resources */,
 				727B28C01B47673B00E92584 /* dataMetadata.plist in Resources */,
+				727B28CD1B47977000E92584 /* INCOME.png in Resources */,
 				728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */,
 				728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */,
 				728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */,
