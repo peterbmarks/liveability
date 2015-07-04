@@ -9,6 +9,7 @@
 #import "DataManager.h"
 #import "FMDB.h"
 #import "Postcode.h"
+#import "Liveability.h"
 
 NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
 
@@ -58,6 +59,32 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"dataMetadata" ofType:@"plist"];
     self.dataSources = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     // NSLog(@"loaded: %@", self.dataSources);
+}
+
+- (Liveability *)loadLiveabilityData:(NSString *)sourceName forPostcode:(NSString *)postcode {
+    Liveability * l = nil;
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:sourceName
+                                                         ofType:@"sqlite"];
+    FMDatabase *db = [FMDatabase databaseWithPath:filePath];
+    if(![db open]) {
+        NSLog(@"Error opening the database at: %@", filePath);
+    }
+    NSLog(@"db opened");
+    // postcode, suburb, state, latitude, longitude
+    FMResultSet *s = [db executeQuery:@"SELECT Percentile, Measurement FROM liveability WHERE Postcode = ?", postcode];
+    if ([s next]) {
+        l = [Liveability new];
+        l.postcode = postcode;
+        l.percentile = [s intForColumn:@"Percentile"];
+        l.measure = [s stringForColumn:@"state"];
+        l.measurement = [self.dataSources[sourceName][@"measurement"] intValue];
+        l.source = [s stringForColumn:@"source"];
+        l.url = [s stringForColumn:@"url"];
+    } else {
+        NSLog(@"No data found for postcode = %@", postcode);
+    }
+    NSLog(@"data loaded");
+    return l;
 }
 
 @end

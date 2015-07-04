@@ -8,10 +8,16 @@
 
 #import "LivabilityTableViewController.h"
 #import "LivabilityTableViewCell.h"
+#import "Liveability.h"
+#import "AppDelegate.h"
+#import "DataManager.h"
+#import "Postcode.h"
 
 @interface LivabilityTableViewController ()
 {
+    NSArray *_dataSources;  // names of the datasources we will display
     NSMutableArray *_livabilityFactorsArray;
+    DataManager *_dataManager;
 }
 @end
 
@@ -19,15 +25,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    _dataManager = appDelegate.dataManager;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _livabilityFactorsArray = [NSMutableArray new];
-    [_livabilityFactorsArray addObject: @{@"factor": @"Air quality", @"goodness": @(75)}];
-    [_livabilityFactorsArray addObject: @{@"factor": @"Parks", @"goodness": @(85)}];
+    _dataSources = @[@"SEIFANational"];
+    for(NSString *dataSource in _dataSources) {
+        Liveability *li = [_dataManager loadLiveabilityData:dataSource forPostcode:self.postcode.postcode];
+        if(li) {
+            [_livabilityFactorsArray addObject:li];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,9 +60,9 @@
     LivabilityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"livabilityCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSDictionary *livFactors = _livabilityFactorsArray[indexPath.row];
-    cell.factorLabel.text = livFactors[@"factor"];
-    
+    Liveability *li = _livabilityFactorsArray[indexPath.row];
+    cell.factorLabel.text = _dataSources[indexPath.row];    // title of the data
+    cell.percentileLabel.text = [NSString stringWithFormat:@"%d%%", li.percentile];
     return cell;
 }
 

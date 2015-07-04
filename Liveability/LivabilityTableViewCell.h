@@ -11,5 +11,6 @@
 @interface LivabilityTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *factorLabel;
 @property (weak, nonatomic) IBOutlet UIView *goodnessView;
+@property (weak, nonatomic) IBOutlet UILabel *percentileLabel;
 
 @end

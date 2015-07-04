@@ -11,9 +11,9 @@
 @interface Liveability : NSObject
 
 @property (nonatomic) NSString *postcode;
-@property (nonatomic) NSInteger score;  // out of 100
+@property (nonatomic) NSInteger percentile;  // out of 100
 @property (nonatomic) NSString *measure;    // what is the thing we're measuring
-@property (nonatomic) NSInteger measurement;    // the value
+@property (nonatomic) NSInteger measurement;    // the actual value
 @property (nonatomic) NSString *source;
 @property (nonatomic) NSString *url;
 @property (nonatomic) NSString *explanation;

@@ -70,7 +70,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FactorLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-zr-1HN">
-                                            <rect key="frame" x="8" y="11" width="92" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="91.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -83,17 +83,26 @@
                                                 <constraint firstAttribute="height" constant="22" id="f1p-Sh-oix"/>
                                             </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nar-eh-XIG">
+                                            <rect key="frame" x="529" y="11" width="29" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="nar-eh-XIG" secondAttribute="centerX" id="3dW-U5-FuB"/>
                                         <constraint firstAttribute="centerY" secondItem="9Ie-DO-hnL" secondAttribute="centerY" id="9bN-o4-HCU"/>
                                         <constraint firstItem="yeV-zr-1HN" firstAttribute="leading" secondItem="JqZ-ZK-8w9" secondAttribute="leadingMargin" id="QLN-ve-0m7"/>
                                         <constraint firstAttribute="centerY" secondItem="yeV-zr-1HN" secondAttribute="centerY" id="jpW-n9-yOd"/>
                                         <constraint firstItem="9Ie-DO-hnL" firstAttribute="trailing" secondItem="JqZ-ZK-8w9" secondAttribute="trailingMargin" id="mrf-B2-A3X"/>
+                                        <constraint firstAttribute="centerY" secondItem="nar-eh-XIG" secondAttribute="centerY" id="n2m-U0-WOh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="factorLabel" destination="yeV-zr-1HN" id="wK9-rY-LFa"/>
                                     <outlet property="goodnessView" destination="9Ie-DO-hnL" id="72H-pN-jyp"/>
+                                    <outlet property="percentileLabel" destination="nar-eh-XIG" id="R4z-Gf-azf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

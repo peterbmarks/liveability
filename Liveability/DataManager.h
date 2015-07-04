@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Liveability;
+
 extern NSString const * kDataLoadedNotification;
 
 @interface DataManager : NSObject
 
 @property (nonatomic) NSMutableArray *postcodes;
 @property (nonatomic) NSDictionary *dataSources;
+
+- (Liveability *)loadLiveabilityData:(NSString *)sourceName forPostcode:(NSString *)postcode;
 
 @end
