@@ -41,7 +41,7 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
     }
     NSLog(@"_postcodesDb opened");
     // postcode, suburb, state, latitude, longitude
-    FMResultSet *s = [_postcodesDb executeQuery:@"SELECT suburb, state, postcode, latitude, longitude FROM postcodes"];
+    FMResultSet *s = [_postcodesDb executeQuery:@"SELECT suburb, state, postcode, latitude, longitude FROM postcodes order by suburb"];
     while ([s next]) {
         //retrieve values for each record
         Postcode * pc = [Postcode new];
@@ -77,8 +77,8 @@ NSString const * kDataLoadedNotification = @"kDataLoadedNotification";
         l.dataSource = sourceName;
         l.postcode = postcode;
         l.percentile = [s intForColumn:@"Percentile"];
-        l.measure = [s stringForColumn:@"Measurement"];
-        l.measurement = [self.dataSources[sourceName][@"measurement"] intValue];
+        l.measure = self.dataSources[sourceName][@"measurement"];   // what we are measuring
+        l.measureValue = [s intForColumn:@"Measurement"];   // the value
         l.source = self.dataSources[sourceName][@"source"];
         l.url = self.dataSources[sourceName][@"url"];
     } else {
