@@ -103,6 +103,7 @@
                                     <outlet property="factorLabel" destination="yeV-zr-1HN" id="wK9-rY-LFa"/>
                                     <outlet property="goodnessView" destination="9Ie-DO-hnL" id="72H-pN-jyp"/>
                                     <outlet property="percentileLabel" destination="nar-eh-XIG" id="R4z-Gf-azf"/>
+                                    <segue destination="R2w-NU-PVG" kind="show" identifier="showDataSource" id="wMa-V8-2fp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,6 +116,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sh-Y8-brD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1429" y="129"/>
+        </scene>
+        <!--Show Data Source View Controller-->
+        <scene sceneID="W8i-qv-5Mv">
+            <objects>
+                <viewController id="R2w-NU-PVG" customClass="ShowDataSourceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ocN-9d-7on"/>
+                        <viewControllerLayoutGuide type="bottom" id="jis-bc-Q6l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="97y-mU-dI9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKQ-Ns-qsF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kKQ-Ns-qsF" firstAttribute="leading" secondItem="97y-mU-dI9" secondAttribute="leadingMargin" constant="-16" id="GgE-Vp-2xK"/>
+                            <constraint firstItem="jis-bc-Q6l" firstAttribute="top" secondItem="kKQ-Ns-qsF" secondAttribute="bottom" id="RP9-U1-QxS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kKQ-Ns-qsF" secondAttribute="trailing" constant="-16" id="TA0-f2-uPQ"/>
+                            <constraint firstItem="kKQ-Ns-qsF" firstAttribute="top" secondItem="97y-mU-dI9" secondAttribute="topMargin" id="jnr-gz-cPl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="kKQ-Ns-qsF" id="gui-RO-WNo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yak-sd-0vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2112" y="129"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

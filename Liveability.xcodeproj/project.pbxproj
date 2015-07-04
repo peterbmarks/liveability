@@ -12,6 +12,7 @@
 		727B28BC1B47592F00E92584 /* Liveability.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28BB1B47592F00E92584 /* Liveability.m */; };
 		727B28BE1B47671100E92584 /* SEIFANational.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 727B28BD1B47671100E92584 /* SEIFANational.sqlite */; };
 		727B28C01B47673B00E92584 /* dataMetadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 727B28BF1B47673B00E92584 /* dataMetadata.plist */; };
+		727B28C31B47789100E92584 /* ShowDataSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28C21B47789100E92584 /* ShowDataSourceViewController.m */; };
 		7284A60D1B471480003A28B7 /* Postcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7284A60C1B471480003A28B7 /* Postcode.m */; };
 		7284A60F1B471BC3003A28B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A60E1B471BC3003A28B7 /* MapKit.framework */; };
 		7284A6111B471BCC003A28B7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7284A6101B471BCC003A28B7 /* AddressBook.framework */; };
@@ -52,6 +53,8 @@
 		727B28BB1B47592F00E92584 /* Liveability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Liveability.m; sourceTree = "<group>"; };
 		727B28BD1B47671100E92584 /* SEIFANational.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEIFANational.sqlite; sourceTree = "<group>"; };
 		727B28BF1B47673B00E92584 /* dataMetadata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataMetadata.plist; sourceTree = "<group>"; };
+		727B28C11B47789100E92584 /* ShowDataSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDataSourceViewController.h; sourceTree = "<group>"; };
+		727B28C21B47789100E92584 /* ShowDataSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDataSourceViewController.m; sourceTree = "<group>"; };
 		7284A60B1B471480003A28B7 /* Postcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postcode.h; sourceTree = "<group>"; };
 		7284A60C1B471480003A28B7 /* Postcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postcode.m; sourceTree = "<group>"; };
 		7284A60E1B471BC3003A28B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -143,6 +146,8 @@
 				727B28B81B47551400E92584 /* LivabilityTableViewCell.m */,
 				727B28BA1B47592F00E92584 /* Liveability.h */,
 				727B28BB1B47592F00E92584 /* Liveability.m */,
+				727B28C11B47789100E92584 /* ShowDataSourceViewController.h */,
+				727B28C21B47789100E92584 /* ShowDataSourceViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
 				728DB98A1B46910C00FBE1BD /* Images.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
@@ -320,6 +325,7 @@
 				728DB9A81B46982D00FBE1BD /* DataManager.m in Sources */,
 				728DB9831B46910C00FBE1BD /* SuburblistViewController.m in Sources */,
 				728DB9B51B46985200FBE1BD /* FMDatabase.m in Sources */,
+				727B28C31B47789100E92584 /* ShowDataSourceViewController.m in Sources */,
 				728DB9B91B46985200FBE1BD /* FMResultSet.m in Sources */,
 				728DB97D1B46910C00FBE1BD /* main.m in Sources */,
 				727B28B61B4752B400E92584 /* LivabilityTableViewController.m in Sources */,

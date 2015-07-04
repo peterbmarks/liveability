@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "DataManager.h"
 #import "Postcode.h"
+#import "ShowDataSourceViewController.h"
 
 @interface LivabilityTableViewController ()
 {
@@ -101,14 +102,23 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSLog(@"%s", __func__);
+    if ([[segue identifier] isEqualToString:@"showDataSource"]) {
+        NSLog(@"show data source");
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Liveability *li = _livabilityFactorsArray[indexPath.row];
+        ShowDataSourceViewController *controller = (ShowDataSourceViewController *)[segue destinationViewController];
+        controller.livability = li;
+        controller.suburb = self.postcode.suburb;
+    }
 }
-*/
+
 
 @end
