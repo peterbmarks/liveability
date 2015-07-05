@@ -16,6 +16,7 @@
 		725B60821B48C547006CE6B6 /* NBN Internet.png in Resources */ = {isa = PBXBuildFile; fileRef = 725B60811B48C547006CE6B6 /* NBN Internet.png */; };
 		725B60841B48C5C4006CE6B6 /* Safety.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 725B60831B48C5C4006CE6B6 /* Safety.sqlite */; };
 		725B60861B48C60B006CE6B6 /* Safety.png in Resources */ = {isa = PBXBuildFile; fileRef = 725B60851B48C60B006CE6B6 /* Safety.png */; };
+		725B60881B48C76C006CE6B6 /* Age.png in Resources */ = {isa = PBXBuildFile; fileRef = 725B60871B48C76C006CE6B6 /* Age.png */; };
 		727B28B61B4752B400E92584 /* LivabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B51B4752B400E92584 /* LivabilityTableViewController.m */; };
 		727B28B91B47551400E92584 /* LivabilityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28B81B47551400E92584 /* LivabilityTableViewCell.m */; };
 		727B28BC1B47592F00E92584 /* Liveability.m in Sources */ = {isa = PBXBuildFile; fileRef = 727B28BB1B47592F00E92584 /* Liveability.m */; };
@@ -73,6 +74,7 @@
 		725B60811B48C547006CE6B6 /* NBN Internet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NBN Internet.png"; sourceTree = "<group>"; };
 		725B60831B48C5C4006CE6B6 /* Safety.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Safety.sqlite; sourceTree = "<group>"; };
 		725B60851B48C60B006CE6B6 /* Safety.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Safety.png; sourceTree = "<group>"; };
+		725B60871B48C76C006CE6B6 /* Age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Age.png; sourceTree = "<group>"; };
 		727B28B41B4752B400E92584 /* LivabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewController.h; sourceTree = "<group>"; };
 		727B28B51B4752B400E92584 /* LivabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivabilityTableViewController.m; sourceTree = "<group>"; };
 		727B28B71B47551400E92584 /* LivabilityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivabilityTableViewCell.h; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				72BECCAB1B48BD9200B38BB5 /* Media.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
 				72F3AFC21B4889E4008297BC /* Launch.png */,
+				725B60871B48C76C006CE6B6 /* Age.png */,
 				728DB97A1B46910C00FBE1BD /* Supporting Files */,
 				728DB9A61B46982D00FBE1BD /* DataManager.h */,
 				728DB9A71B46982D00FBE1BD /* DataManager.m */,
@@ -390,6 +393,7 @@
 				727B28CD1B47977000E92584 /* INCOME.png in Resources */,
 				7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */,
 				728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */,
+				725B60881B48C76C006CE6B6 /* Age.png in Resources */,
 				7241BCC01B47C54E00703496 /* Age.png in Resources */,
 				728DB9891B46910C00FBE1BD /* Main.storyboard in Resources */,
 				728DB98E1B46910C00FBE1BD /* LaunchScreen.xib in Resources */,

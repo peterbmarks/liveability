@@ -48,7 +48,7 @@
 		<key>isLga</key>
 		<true/>
 		<key>icon</key>
-		<string>AirIcon</string>
+		<string>Age.png</string>
 	</dict>
 	<key>Safety</key>
 	<dict>
