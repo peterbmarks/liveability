@@ -50,7 +50,7 @@
 		<key>icon</key>
 		<string>AirIcon</string>
 	</dict>
-	<key>Crime</key>
+	<key>Safety</key>
 	<dict>
 		<key>measurement</key>
 		<string>Crime</string>

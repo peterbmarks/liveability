@@ -38,7 +38,7 @@ alpha:1.0]
     NSArray *lgas = [_dataManager lgasForPostcode:self.postcode.postcode];
     NSLog(@"postcode: %@ has lgas: %@", self.postcode.postcode, lgas);
     _livabilityFactorsArray = [NSMutableArray new];
-    _dataSources = @[@"SEIFA National", @"INCOME", @"Diversity", @"Age", @"Crime", @"NBN Internet"];
+    _dataSources = @[@"SEIFA National", @"INCOME", @"Diversity", @"Age", @"Safety", @"NBN Internet"];
     for(NSString *dataSource in _dataSources) {
         BOOL isLga = [_dataManager.dataSources[dataSource][@"isLga"] boolValue];
         if(isLga) {
