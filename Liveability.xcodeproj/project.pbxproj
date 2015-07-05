@@ -65,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		723FFE591B48CA9000C9BDF7 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 		7241BCB51B47AECD00703496 /* postcodeToLga.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = postcodeToLga.sqlite; sourceTree = "<group>"; };
 		7241BCB71B47BBCB00703496 /* Diversity.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Diversity.sqlite; sourceTree = "<group>"; };
 		7241BCBB1B47BF3200703496 /* Diversity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Diversity.png; sourceTree = "<group>"; };
@@ -154,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		723FFE581B48CA7000C9BDF7 /* python */ = {
+			isa = PBXGroup;
+			children = (
+				723FFE591B48CA9000C9BDF7 /* main.py */,
+			);
+			name = python;
+			sourceTree = "<group>";
+		};
 		727B28D41B47A04B00E92584 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +192,7 @@
 		728DB96E1B46910B00FBE1BD = {
 			isa = PBXGroup;
 			children = (
+				723FFE581B48CA7000C9BDF7 /* python */,
 				728DB9A31B4697F200FBE1BD /* Data */,
 				728DB9791B46910C00FBE1BD /* Liveability */,
 				728DB9961B46910C00FBE1BD /* LiveabilityTests */,
