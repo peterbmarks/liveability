@@ -32,6 +32,7 @@ alpha:1.0]
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Liveability";
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     _dataManager = appDelegate.dataManager;
     NSArray *lgas = [_dataManager lgasForPostcode:self.postcode.postcode];
