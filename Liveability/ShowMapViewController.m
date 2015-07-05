@@ -62,7 +62,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIBarButtonItem *livabilityButton = [[UIBarButtonItem alloc] initWithTitle:@"Livability" style:UIBarButtonItemStylePlain target:self action:@selector(showLivability:)];
+    UIBarButtonItem *livabilityButton = [[UIBarButtonItem alloc] initWithTitle:@"Liveability" style:UIBarButtonItemStylePlain target:self action:@selector(showLivability:)];
     self.navigationItem.rightBarButtonItem = livabilityButton;
     [self configureView];
 }
