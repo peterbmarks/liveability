@@ -10,7 +10,9 @@
 #import "Liveability.h"
 
 @interface ShowDataSourceViewController ()
-
+{
+    UIActivityViewController *_activityViewController;
+}
 @end
 
 @implementation ShowDataSourceViewController
@@ -25,6 +27,25 @@
         NSLog(@"Error: unabel to load image %@", self.livability.dataSource);
     }
     self.sourceLogoImageView.image = image;
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share:)];
+    self.navigationItem.rightBarButtonItem = shareButton;
+
+}
+
+- (void)share:(id)sender {
+    NSLog(@"%s", __func__);
+    NSArray *excludedActivityArray = excludedActivityArray = @[
+                                  UIActivityTypePrint,
+                                  UIActivityTypeAddToReadingList,
+                                  UIActivityTypeAirDrop,
+                                  UIActivityTypeAssignToContact
+                                  ];
+    UIImage *image = [UIImage imageNamed:self.livability.dataSource];
+    _activityViewController = [[UIActivityViewController alloc]
+                               initWithActivityItems:@[ @"#govhack sharing data", image, [NSURL URLWithString:self.livability.url]] applicationActivities:nil];
+                               
+    _activityViewController.excludedActivityTypes = excludedActivityArray;
+    [self presentViewController:_activityViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
