@@ -44,7 +44,7 @@
 		728DB9BB1B46986100FBE1BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */; };
 		729365BA1B487CAD00AF43B2 /* Crime.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 729365B91B487CAD00AF43B2 /* Crime.sqlite */; };
 		729365BC1B487D4400AF43B2 /* Crime.png in Resources */ = {isa = PBXBuildFile; fileRef = 729365BB1B487D4400AF43B2 /* Crime.png */; };
-		729365BE1B487DEB00AF43B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729365BD1B487DEB00AF43B2 /* Media.xcassets */; };
+		72BECCAC1B48BD9200B38BB5 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BECCAB1B48BD9200B38BB5 /* Media.xcassets */; };
 		72D354DA1B489B30001700DA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D354D91B489B30001700DA /* Icons.xcassets */; };
 		72F3AFC31B4889E4008297BC /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F3AFC21B4889E4008297BC /* Launch.png */; };
 /* End PBXBuildFile section */
@@ -118,7 +118,7 @@
 		728DB9BA1B46986100FBE1BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		729365B91B487CAD00AF43B2 /* Crime.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crime.sqlite; sourceTree = "<group>"; };
 		729365BB1B487D4400AF43B2 /* Crime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crime.png; sourceTree = "<group>"; };
-		729365BD1B487DEB00AF43B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		72BECCAB1B48BD9200B38BB5 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		72D354D91B489B30001700DA /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		72F3AFC21B4889E4008297BC /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,8 +201,8 @@
 				727B28C11B47789100E92584 /* ShowDataSourceViewController.h */,
 				727B28C21B47789100E92584 /* ShowDataSourceViewController.m */,
 				728DB9871B46910C00FBE1BD /* Main.storyboard */,
-				729365BD1B487DEB00AF43B2 /* Media.xcassets */,
 				72D354D91B489B30001700DA /* Icons.xcassets */,
+				72BECCAB1B48BD9200B38BB5 /* Media.xcassets */,
 				728DB98C1B46910C00FBE1BD /* LaunchScreen.xib */,
 				72F3AFC21B4889E4008297BC /* Launch.png */,
 				728DB97A1B46910C00FBE1BD /* Supporting Files */,
@@ -370,6 +370,7 @@
 				72F3AFC31B4889E4008297BC /* Launch.png in Resources */,
 				727B28BE1B47671100E92584 /* SEIFA National.sqlite in Resources */,
 				727B28C01B47673B00E92584 /* dataMetadata.plist in Resources */,
+				72BECCAC1B48BD9200B38BB5 /* Media.xcassets in Resources */,
 				727B28CD1B47977000E92584 /* INCOME.png in Resources */,
 				7241BCB61B47AECD00703496 /* postcodeToLga.sqlite in Resources */,
 				728DB9A51B46980900FBE1BD /* postcodes.sqlite in Resources */,
@@ -380,7 +381,6 @@
 				729365BC1B487D4400AF43B2 /* Crime.png in Resources */,
 				7241BCBE1B47C4F000703496 /* Age.sqlite in Resources */,
 				7241BCBC1B47BF3200703496 /* Diversity.png in Resources */,
-				729365BE1B487DEB00AF43B2 /* Media.xcassets in Resources */,
 				72D354DA1B489B30001700DA /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
