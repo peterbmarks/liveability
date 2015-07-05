@@ -63,5 +63,18 @@
 		<key>icon</key>
 		<string>CrimeIcon</string>
 	</dict>
+	<key>NBN Internet</key>
+	<dict>
+		<key>measurement</key>
+		<string>Availability of NBN High Speed broadband.</string>
+		<key>source</key>
+		<string>Overall Fixed Broadband Availability</string>
+		<key>url</key>
+		<string>https://www.mybroadband.communications.gov.au</string>
+		<key>isLga</key>
+		<false/>
+		<key>icon</key>
+		<string>AirIcon</string>
+	</dict>
 </dict>
 </plist>
